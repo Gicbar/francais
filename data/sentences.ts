@@ -1,0 +1,46 @@
+import type { Sentence } from "@/lib/types";
+
+// Input comprensible A1: frases reales de tus clases (ARQUITECSOFT) + frases
+// generales de alta frecuencia para ampliar exposición más allá del curso.
+export const seedSentences: Sentence[] = [
+  { id: "st1", fr: "Ma couleur préférée est le noir et le rouge.", es: "Mi color favorito es el negro y el rojo.", theme: "couleurs", level: "A1", source: "Résumé de pratique" },
+  { id: "st2", fr: "Mon bureau est blanc.", es: "Mi escritorio es blanco.", theme: "couleurs", level: "A1", source: "Résumé de pratique" },
+  { id: "st3", fr: "Je suis colombien, mais j'adore Paris.", es: "Soy colombiano, pero amo París.", theme: "salutations", level: "A1", source: "Résumé de pratique" },
+  { id: "st4", fr: "Mon plat préféré est le riz.", es: "Mi plato favorito es el arroz.", theme: "nourriture", level: "A1", source: "Résumé de pratique" },
+  { id: "st5", fr: "J'aime le riz avec du poulet, mais je déteste les légumes.", es: "Me gusta el arroz con pollo, pero odio las verduras.", theme: "nourriture", level: "A1", source: "Résumé de pratique" },
+  { id: "st6", fr: "C'est mon ordinateur.", es: "Es mi computador.", theme: "possessifs", level: "A1", source: "Cours 10" },
+  { id: "st7", fr: "Je déteste l'opéra.", es: "Odio la ópera.", theme: "possessifs", level: "A1", source: "Cours 10" },
+  { id: "st8", fr: "J'adore l'escalade.", es: "Amo la escalada.", theme: "loisirs", level: "A1", source: "Cours 10" },
+  { id: "st9", fr: "J'aime la natation mais je n'aime pas le ski.", es: "Me gusta la natación pero no me gusta el esquí.", theme: "loisirs", level: "A1", source: "Cours 10" },
+  { id: "st10", fr: "Dans ma valise, il y a mon livre et mes magazines.", es: "En mi maleta hay mi libro y mis revistas.", theme: "possessifs", level: "A1", source: "Cours 10" },
+  { id: "st11", fr: "Nous aimons la musique mais nous n'aimons pas le football.", es: "Nos gusta la música pero no nos gusta el fútbol.", theme: "verbes", level: "A1", source: "Cours 10" },
+  { id: "st12", fr: "Il aime le cinéma mais il déteste la lecture.", es: "A él le gusta el cine pero odia la lectura.", theme: "verbes", level: "A1", source: "Cours 10" },
+  { id: "st13", fr: "Bonjour, comment ça va ?", es: "Hola, ¿cómo estás?", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st14", fr: "Je m'appelle Camilo et j'habite à Bogotá.", es: "Me llamo Camilo y vivo en Bogotá.", theme: "salutations", level: "A1", source: "Uso cotidiano" },
+  { id: "st15", fr: "Excusez-moi, je ne comprends pas. Vous pouvez répéter ?", es: "Disculpe, no entiendo. ¿Puede repetir?", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st16", fr: "Je voudrais un café, s'il vous plaît.", es: "Quisiera un café, por favor.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st17", fr: "Aujourd'hui, il fait beau à Paris.", es: "Hoy hace buen tiempo en París.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st18", fr: "Le lundi, je travaille. Le samedi, je fais du sport.", es: "El lunes trabajo. El sábado hago deporte.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st19", fr: "Ma famille habite à Medellín.", es: "Mi familia vive en Medellín.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st20", fr: "J'ai un frère et une sœur.", es: "Tengo un hermano y una hermana.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st21", fr: "Il y a un ordinateur et une chaise sur le bureau.", es: "Hay un computador y una silla en el escritorio.", theme: "bureau", level: "A1", source: "Uso cotidiano" },
+  { id: "st22", fr: "Je travaille avec des documents et un stylo.", es: "Trabajo con documentos y un lapicero.", theme: "bureau", level: "A1", source: "Uso cotidiano" },
+  { id: "st23", fr: "Nous parlons français et espagnol.", es: "Hablamos francés y español.", theme: "verbes", level: "A1", source: "Uso cotidiano" },
+  { id: "st24", fr: "Elle regarde un film et j'écoute de la musique.", es: "Ella mira una película y yo escucho música.", theme: "verbes", level: "A1", source: "Uso cotidiano" },
+  { id: "st25", fr: "Il fait froid aujourd'hui, il pleut.", es: "Hace frío hoy, está lloviendo.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st26", fr: "Quelle heure est-il ? Il est huit heures du matin.", es: "¿Qué hora es? Son las ocho de la mañana.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st27", fr: "Excusez-moi, où est la gare ? C'est tout droit.", es: "Disculpe, ¿dónde está la estación? Es derecho.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st28", fr: "Ça coûte combien ? C'est vingt euros.", es: "¿Cuánto cuesta? Son veinte euros.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st29", fr: "J'ai mal à la tête, je vais à la pharmacie.", es: "Me duele la cabeza, voy a la farmacia.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+  { id: "st30", fr: "D'abord je travaille, ensuite je fais du sport.", es: "Primero trabajo, luego hago deporte.", theme: "essentiel", level: "A1", source: "Uso cotidiano" },
+
+  // --- Nivel A2 ---
+  { id: "st31", fr: "Hier soir, j'ai regardé un film et j'ai mangé du riz.", es: "Anoche vi una película y comí arroz.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
+  { id: "st32", fr: "La semaine prochaine, je vais visiter Paris.", es: "La próxima semana voy a visitar París.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
+  { id: "st33", fr: "Je me réveille à sept heures et je me douche vite.", es: "Me despierto a las siete y me ducho rápido.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
+  { id: "st34", fr: "Je pense que le français est difficile, mais ça vaut la peine.", es: "Pienso que el francés es difícil, pero vale la pena.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
+  { id: "st35", fr: "J'aime le café, cependant je préfère le thé le soir.", es: "Me gusta el café, sin embargo prefiero el té por la noche.", theme: "phrases", level: "A2", source: "Uso cotidiano" },
+  { id: "st36", fr: "Ce livre, je le connais déjà.", es: "Ese libro, ya lo conozco.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
+  { id: "st37", fr: "Elle est plus grande que moi, mais je suis aussi rapide qu'elle.", es: "Ella es más alta que yo, pero yo soy tan rápido como ella.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
+  { id: "st38", fr: "J'ai décidé d'essayer, même si j'ai peur de me tromper.", es: "Decidí intentarlo, aunque tengo miedo de equivocarme.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
+];

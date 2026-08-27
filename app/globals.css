@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/*
+  Paleta pensada para reducir carga cognitiva mientras se estudia:
+  neutros cálidos y poco saturados de fondo, un verde salvia como acento
+  principal (calma / crecimiento) y un azul apagado como secundario.
+  El "error" usa un terracota suave en vez de rojo — evita la respuesta
+  de estrés que castiga innecesariamente equivocarse en una tarjeta.
+*/
+:root {
+  --bg: #f7f6f1;
+  --bg-soft: #fbfaf7;
+  --surface: #ffffff;
+  --border: #e6e2d6;
+  --ink: #23282a;
+  --ink-soft: #5b6462;
+  --ink-faint: #8b9290;
+
+  --sage: #5f8570;
+  --sage-soft: #e6ede7;
+  --sage-ink: #2f4a3a;
+
+  --dusk: #6f86a0;
+  --dusk-soft: #e9edf2;
+
+  --clay: #bd7f5c;
+  --clay-soft: #f3e6dc;
+
+  --radius: 16px;
+  --shadow-soft: 0 1px 2px rgba(35, 40, 42, 0.04), 0 8px 24px rgba(35, 40, 42, 0.05);
+  --shadow-lift: 0 4px 10px rgba(35, 40, 42, 0.06), 0 16px 32px rgba(35, 40, 42, 0.08);
+  --wash-a: rgba(95, 133, 112, 0.10);
+  --wash-b: rgba(111, 134, 160, 0.09);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171a;
+    --bg-soft: #181c1f;
+    --surface: #1c2124;
+    --border: #2a3033;
+    --ink: #eceeec;
+    --ink-soft: #aab2b0;
+    --ink-faint: #7c8482;
+
+    --sage: #8fb39d;
+    --sage-soft: rgba(143, 179, 157, 0.14);
+    --sage-ink: #cfe4d8;
+
+    --dusk: #9bb0c4;
+    --dusk-soft: rgba(155, 176, 196, 0.14);
+
+    --clay: #d6a084;
+    --clay-soft: rgba(214, 160, 132, 0.14);
+
+    --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.25);
+    --shadow-lift: 0 4px 10px rgba(0, 0, 0, 0.25), 0 20px 40px rgba(0, 0, 0, 0.3);
+    --wash-a: rgba(143, 179, 157, 0.08);
+    --wash-b: rgba(155, 176, 196, 0.07);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+  --color-sage-ink: var(--sage-ink);
+  --color-dusk: var(--dusk);
+  --color-dusk-soft: var(--dusk-soft);
+  --color-clay: var(--clay);
+  --color-clay-soft: var(--clay-soft);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lift: var(--shadow-lift);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(ellipse 900px 500px at 12% -10%, var(--wash-a), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 0%, var(--wash-b), transparent 55%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+.tricolor {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+.tricolor span {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+}
+.tricolor span:nth-child(1) { background: var(--sage); }
+.tricolor span:nth-child(2) { background: var(--dusk); }
+.tricolor span:nth-child(3) { background: var(--clay); }
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: var(--sage-soft);
+  color: var(--sage-ink);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.fade-up {
+  animation: fade-up 0.35s ease;
+}
+
+@keyframes flip-in {
+  from { opacity: 0; transform: translateY(4px) scale(0.99); }
+  to { opacity: 1; transform: none; }
+}
+.flip-in {
+  animation: flip-in 0.25s ease;
+}
