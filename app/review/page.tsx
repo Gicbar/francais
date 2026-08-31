@@ -6,6 +6,7 @@ import { buildSession, buildFocusedSession, SESSION_LENGTHS, type SessionCard } 
 import { review } from "@/lib/srs";
 import { saveState, bumpLog, addNote, popFocusQueue } from "@/lib/storage";
 import { speakFrench, primeVoices } from "@/lib/speech";
+import { checkGrammar, type GrammarIssue } from "@/lib/grammarCheck";
 import type { Card, Rating } from "@/lib/types";
 
 type LengthOption = 5 | 15 | 30 | "todo";
@@ -36,6 +37,8 @@ export default function ReviewPage() {
   const [revealed, setRevealed] = useState(false);
   const [elaborationCard, setElaborationCard] = useState<Card | null>(null);
   const [note, setNote] = useState("");
+  const [checking, setChecking] = useState(false);
+  const [checkResult, setCheckResult] = useState<GrammarIssue[] | null | undefined>(undefined);
   const [done, setDone] = useState(0);
   const [focusMode, setFocusMode] = useState(false);
   const [picking, setPicking] = useState(true);
@@ -117,7 +120,22 @@ export default function ReviewPage() {
   function submitElaboration() {
     if (elaborationCard && note.trim()) addNote(elaborationCard.id, note.trim());
     setNote("");
+    setCheckResult(undefined);
     setElaborationCard(null);
+  }
+
+  function skipElaboration() {
+    setNote("");
+    setCheckResult(undefined);
+    setElaborationCard(null);
+  }
+
+  async function reviewElaboration() {
+    if (!note.trim()) return;
+    setChecking(true);
+    const result = await checkGrammar(note.trim());
+    setChecking(false);
+    setCheckResult(result);
   }
 
   if (picking) {
@@ -163,25 +181,72 @@ export default function ReviewPage() {
         </p>
         <textarea
           value={note}
-          onChange={(e) => setNote(e.target.value)}
+          onChange={(e) => { setNote(e.target.value); setCheckResult(undefined); }}
           placeholder="Ex : Ma souris est noire."
           rows={3}
           className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-ink placeholder:text-ink-faint focus:outline-none focus:ring-2 focus:ring-sage/40 resize-none"
         />
+
+        {checkResult !== undefined && (
+          <div className="mt-3">
+            {checkResult === null ? (
+              <p className="text-xs text-ink-faint">
+                No se pudo revisar ahora mismo (¿sin conexión?) — puedes guardar igual.
+              </p>
+            ) : checkResult.length === 0 ? (
+              <p className="text-sm text-sage-ink">✓ Sin errores detectados. ¡Bien hecho!</p>
+            ) : (
+              <div className="flex flex-col gap-2">
+                {checkResult.map((issue, idx) => (
+                  <div key={idx} className="bg-clay-soft border border-clay/25 rounded-xl px-4 py-3 text-sm text-left">
+                    <p className="text-clay">
+                      <span className="line-through decoration-clay/60">{issue.badText}</span>
+                      {issue.suggestions.length > 0 && (
+                        <>
+                          {" → "}
+                          <span className="font-medium">{issue.suggestions.join(" / ")}</span>
+                        </>
+                      )}
+                    </p>
+                    <p className="text-ink-faint mt-1 text-xs">{issue.message}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         <div className="flex gap-3 mt-4">
+          {checkResult === undefined ? (
+            <button
+              onClick={reviewElaboration}
+              disabled={!note.trim() || checking}
+              className="flex-1 rounded-full bg-dusk text-bg py-3 text-sm font-medium hover:opacity-90 transition-opacity shadow-soft disabled:opacity-50"
+            >
+              {checking ? "Revisando…" : "Revisar"}
+            </button>
+          ) : (
+            <button
+              onClick={submitElaboration}
+              className="flex-1 rounded-full bg-sage text-bg py-3 text-sm font-medium hover:opacity-90 transition-opacity shadow-soft"
+            >
+              Guardar y continuar
+            </button>
+          )}
           <button
-            onClick={submitElaboration}
-            className="flex-1 rounded-full bg-sage text-bg py-3 text-sm font-medium hover:opacity-90 transition-opacity shadow-soft"
-          >
-            Guardar y continuar
-          </button>
-          <button
-            onClick={() => { setNote(""); setElaborationCard(null); }}
+            onClick={skipElaboration}
             className="px-5 rounded-full border border-border text-ink-soft text-sm hover:bg-surface"
           >
             Saltar
           </button>
         </div>
+
+        <p className="text-[11px] text-ink-faint mt-3">
+          La revisión usa LanguageTool (gratis, público) — capta bien
+          ortografía, concordancia y errores de patrón, pero puede no
+          detectar todo (matices de tiempo verbal, por ejemplo). Tómalo como
+          una segunda opinión, no como la verdad absoluta.
+        </p>
       </div>
     );
   }
