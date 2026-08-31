@@ -43,4 +43,19 @@ export const seedSentences: Sentence[] = [
   { id: "st36", fr: "Ce livre, je le connais déjà.", es: "Ese libro, ya lo conozco.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
   { id: "st37", fr: "Elle est plus grande que moi, mais je suis aussi rapide qu'elle.", es: "Ella es más alta que yo, pero yo soy tan rápido como ella.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
   { id: "st38", fr: "J'ai décidé d'essayer, même si j'ai peur de me tromper.", es: "Decidí intentarlo, aunque tengo miedo de equivocarme.", theme: "essentiel", level: "A2", source: "Uso cotidiano" },
+
+  { id: "st39", fr: "Je fais du sport le matin, mais je ne fais pas de gymnastique le soir.", es: "Hago deporte por la mañana, pero no hago gimnasia por la noche.", theme: "essentiel", level: "A1", source: "Cours 11" },
+  { id: "st40", fr: "La réunion est à neuf heures, heure de Paris.", es: "La reunión es a las nueve, hora de París.", theme: "essentiel", level: "A1", source: "Cours 11" },
+  { id: "st41", fr: "Il est midi, je veux aller au restaurant.", es: "Es mediodía, quiero ir al restaurante.", theme: "essentiel", level: "A1", source: "Cours 11" },
+  { id: "st42", fr: "Le week-end, elle fait de l'exercice à la piscine.", es: "El fin de semana, ella hace ejercicio en la piscina.", theme: "essentiel", level: "A1", source: "Cours 11" },
+
+  // --- Nivel B1 ---
+  { id: "st43", fr: "Quand j'étais petit, je passais mes vacances chez mes grands-parents.", es: "Cuando era pequeño, pasaba mis vacaciones donde mis abuelos.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
+  { id: "st44", fr: "Je voudrais réserver un hôtel, mais il faut que je vérifie mon budget.", es: "Quisiera reservar un hotel, pero tengo que revisar mi presupuesto.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
+  { id: "st45", fr: "Bien qu'il pleuve, nous avons décidé de sortir quand même.", es: "Aunque está lloviendo, decidimos salir de todos modos.", theme: "phrases", level: "B1", source: "Uso cotidiano" },
+  { id: "st46", fr: "Selon les actualités, le climat change plus vite que prévu.", es: "Según las noticias, el clima cambia más rápido de lo previsto.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
+  { id: "st47", fr: "À ta place, je démissionnerais et je chercherais un autre emploi.", es: "En tu lugar, renunciaría y buscaría otro trabajo.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
+  { id: "st48", fr: "C'est une personne honnête qui a tendance à trop travailler.", es: "Es una persona honesta que tiende a trabajar demasiado.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
+  { id: "st49", fr: "Ils se sont disputés, mais ils se sont réconciliés le lendemain.", es: "Se pelearon, pero se reconciliaron al día siguiente.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
+  { id: "st50", fr: "Il vaut mieux que tu ailles chez le médecin avant que ça empire.", es: "Es mejor que vayas al médico antes de que empeore.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
 ];

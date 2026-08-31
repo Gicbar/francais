@@ -204,6 +204,23 @@ const a1Cards: RawCard[] = [
   // --- Conectores extra (más allá de mais/et/parce que/aussi/donc) ---
   { id: "e72", fr: "si / alors", es: "si / entonces", theme: "essentiel" },
   { id: "e73", fr: "d'abord / ensuite / enfin", es: "primero / luego / finalmente", theme: "essentiel" },
+
+  // --- Cours 11 ARQUITECSOFT: faire, vouloir, articles contractés, l'heure ---
+  { id: "c11-1", fr: "nous faisons / vous faites / ils font", es: "nosotros hacemos / ustedes hacen / ellos hacen (faire)", theme: "verbes" },
+  { id: "c11-2", fr: "je veux / tu veux / il veut", es: "yo quiero / tú quieres / él quiere (vouloir)", theme: "verbes" },
+  { id: "c11-3", fr: "nous voulons / vous voulez / ils veulent", es: "nosotros queremos / ustedes quieren / ellos quieren (vouloir)", theme: "verbes" },
+  { id: "c11-4", fr: "faire du sport / faire de la musculation", es: "hacer deporte / hacer musculación", theme: "essentiel", example: "Je fais du sport le matin.", exampleEs: "Hago deporte por la mañana." },
+  { id: "c11-5", fr: "faire des exercices / faire de l'exercice", es: "hacer ejercicios / hacer ejercicio", theme: "essentiel" },
+  { id: "c11-6", fr: "ne pas faire de bruit", es: "no hacer ruido (de/d' en negativo)", theme: "essentiel" },
+  { id: "c11-7", fr: "il est midi / il est minuit", es: "es mediodía / es medianoche", theme: "essentiel" },
+  { id: "c11-8", fr: "il est neuf heures quinze", es: "son las nueve y cuarto", theme: "essentiel" },
+  { id: "c11-9", fr: "il est dix heures moins le quart", es: "son las diez menos cuarto", theme: "essentiel" },
+  { id: "c11-10", fr: "le week-end", es: "el fin de semana", theme: "essentiel" },
+  { id: "c11-11", fr: "le musée", es: "el museo", theme: "loisirs" },
+  { id: "c11-12", fr: "la piscine", es: "la piscina", theme: "loisirs" },
+  { id: "c11-13", fr: "le restaurant / le bar", es: "el restaurante / el bar", theme: "loisirs" },
+  { id: "c11-14", fr: "aller au cinéma / aller à la piscine", es: "ir al cine / ir a la piscina", theme: "essentiel", example: "Je veux aller au théâtre, tu veux venir ?", exampleEs: "Quiero ir al teatro, ¿quieres venir?" },
+  { id: "c11-15", fr: "le fuseau horaire", es: "la zona horaria", theme: "essentiel" },
 ];
 
 // --- Nivel A2: vocabulario para hablar de pasado, futuro, opiniones y
@@ -273,8 +290,94 @@ const a2Cards: RawCard[] = [
   { id: "a2-45", fr: "améliorer / empirer", es: "mejorar / empeorar", theme: "essentiel" },
 ];
 
+// --- Nivel B1: narrar en varios tiempos, matizar una opinión, vocabulario
+// de actualidad, trabajo, salud, relaciones y tecnología — el escalón
+// "usuario independiente" del CEFR.
+const b1Cards: RawCard[] = [
+  // Imparfait / conditionnel (marcadores, la mecánica va en grammar-notes)
+  { id: "B1-1", fr: "quand j'étais petit(e)", es: "cuando era pequeño/a", theme: "essentiel", example: "Quand j'étais petit, j'habitais à la montagne.", exampleEs: "Cuando era pequeño, vivía en la montaña." },
+  { id: "B1-2", fr: "avant, je... / maintenant, je...", es: "antes, yo... / ahora, yo... (contraste de hábitos)", theme: "phrases" },
+  { id: "B1-3", fr: "je voudrais / j'aimerais (conditionnel)", es: "quisiera / me gustaría", theme: "verbes" },
+  { id: "B1-4", fr: "si j'avais le temps, je...", es: "si tuviera tiempo, yo... (hipótesis)", theme: "phrases" },
+  { id: "B1-5", fr: "à ta place, je...", es: "en tu lugar, yo... (consejo)", theme: "phrases" },
+
+  // Conectores de matiz (opinión con nuance)
+  { id: "B1-6", fr: "bien que / quoique", es: "aunque (+ subjonctif)", theme: "phrases" },
+  { id: "B1-7", fr: "tandis que / alors que", es: "mientras que (contraste)", theme: "phrases" },
+  { id: "B1-8", fr: "néanmoins / toutefois", es: "sin embargo / no obstante", theme: "phrases" },
+  { id: "B1-9", fr: "malgré tout", es: "a pesar de todo", theme: "phrases" },
+  { id: "B1-10", fr: "quant à", es: "en cuanto a", theme: "phrases" },
+  { id: "B1-11", fr: "il est vrai que... mais", es: "es verdad que... pero", theme: "phrases" },
+  { id: "B1-12", fr: "dans l'ensemble", es: "en general, en conjunto", theme: "phrases" },
+
+  // Actualité / médias
+  { id: "B1-13", fr: "les actualités / les informations", es: "las noticias", theme: "essentiel" },
+  { id: "B1-14", fr: "un article / une émission", es: "un artículo / un programa (TV/radio)", theme: "essentiel" },
+  { id: "B1-15", fr: "selon / d'après", es: "según / de acuerdo con", theme: "phrases" },
+  { id: "B1-16", fr: "un sondage", es: "una encuesta", theme: "essentiel" },
+  { id: "B1-17", fr: "la société", es: "la sociedad", theme: "essentiel" },
+
+  // Environnement
+  { id: "B1-18", fr: "l'environnement / le climat", es: "el medio ambiente / el clima", theme: "essentiel" },
+  { id: "B1-19", fr: "polluer / recycler", es: "contaminar / reciclar", theme: "essentiel" },
+  { id: "B1-20", fr: "durable / renouvelable", es: "sostenible / renovable", theme: "essentiel" },
+  { id: "B1-21", fr: "le réchauffement climatique", es: "el calentamiento global", theme: "essentiel" },
+  { id: "B1-22", fr: "économiser l'énergie", es: "ahorrar energía", theme: "essentiel" },
+
+  // Personnalité
+  { id: "B1-23", fr: "sociable / timide", es: "sociable / tímido", theme: "essentiel" },
+  { id: "B1-24", fr: "ambitieux / paresseux", es: "ambicioso / perezoso", theme: "essentiel" },
+  { id: "B1-25", fr: "patient / têtu", es: "paciente / terco", theme: "essentiel" },
+  { id: "B1-26", fr: "honnête / franc", es: "honesto / franco", theme: "essentiel" },
+  { id: "B1-27", fr: "sensible / généreux", es: "sensible / generoso", theme: "essentiel" },
+
+  // Voyage / logistique
+  { id: "B1-28", fr: "réserver un hôtel / un vol", es: "reservar un hotel / un vuelo", theme: "essentiel" },
+  { id: "B1-29", fr: "l'hébergement", es: "el alojamiento", theme: "essentiel" },
+  { id: "B1-30", fr: "la douane / le passeport", es: "la aduana / el pasaporte", theme: "essentiel" },
+  { id: "B1-31", fr: "un itinéraire", es: "un itinerario", theme: "essentiel" },
+  { id: "B1-32", fr: "annuler / reporter", es: "cancelar / posponer", theme: "essentiel" },
+
+  // Travail
+  { id: "B1-33", fr: "un contrat / le salaire", es: "un contrato / el salario", theme: "essentiel" },
+  { id: "B1-34", fr: "une formation / un stage", es: "una capacitación / una pasantía", theme: "essentiel" },
+  { id: "B1-35", fr: "un collègue / le patron", es: "un colega / el jefe", theme: "essentiel" },
+  { id: "B1-36", fr: "postuler à un emploi", es: "postularse a un empleo", theme: "essentiel" },
+  { id: "B1-37", fr: "démissionner / être licencié", es: "renunciar / ser despedido", theme: "essentiel" },
+
+  // Santé
+  { id: "B1-38", fr: "une maladie / un symptôme", es: "una enfermedad / un síntoma", theme: "essentiel" },
+  { id: "B1-39", fr: "se soigner / guérir", es: "cuidarse / curarse", theme: "essentiel" },
+  { id: "B1-40", fr: "prendre rendez-vous chez le médecin", es: "pedir cita con el médico", theme: "essentiel" },
+  { id: "B1-41", fr: "une ordonnance", es: "una receta médica", theme: "essentiel" },
+
+  // Relations
+  { id: "B1-42", fr: "se disputer / se réconcilier", es: "pelearse / reconciliarse", theme: "essentiel" },
+  { id: "B1-43", fr: "la confiance / le respect", es: "la confianza / el respeto", theme: "essentiel" },
+  { id: "B1-44", fr: "tomber amoureux de", es: "enamorarse de", theme: "essentiel" },
+  { id: "B1-45", fr: "rompre / se marier", es: "romper / casarse", theme: "essentiel" },
+
+  // Technologie / réseaux sociaux
+  { id: "B1-46", fr: "télécharger / publier", es: "descargar / publicar", theme: "essentiel" },
+  { id: "B1-47", fr: "un réseau social", es: "una red social", theme: "essentiel" },
+  { id: "B1-48", fr: "la sécurité en ligne", es: "la seguridad en línea", theme: "essentiel" },
+  { id: "B1-49", fr: "partager / commenter", es: "compartir / comentar", theme: "essentiel" },
+
+  // Verbes et expressions B1 de alta frecuencia
+  { id: "B1-50", fr: "il paraît que / il semble que", es: "parece que / al parecer", theme: "phrases" },
+  { id: "B1-51", fr: "se rendre compte de", es: "darse cuenta de", theme: "essentiel" },
+  { id: "B1-52", fr: "avoir tendance à", es: "tender a", theme: "essentiel" },
+  { id: "B1-53", fr: "il vaut mieux que (+ subjonctif)", es: "es mejor que", theme: "phrases" },
+  { id: "B1-54", fr: "il faut que (+ subjonctif)", es: "hace falta que / hay que", theme: "phrases" },
+  { id: "B1-55", fr: "au fur et à mesure", es: "a medida que, poco a poco", theme: "phrases" },
+];
+
 function withLevel(level: Level) {
   return (c: RawCard): Card => ({ ...c, level });
 }
 
-export const seedCards: Card[] = [...a1Cards.map(withLevel("A1")), ...a2Cards.map(withLevel("A2"))];
+export const seedCards: Card[] = [
+  ...a1Cards.map(withLevel("A1")),
+  ...a2Cards.map(withLevel("A2")),
+  ...b1Cards.map(withLevel("B1")),
+];

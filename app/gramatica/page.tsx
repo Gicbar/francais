@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { grammarNotes, type Drill } from "@/data/grammar-notes";
+import type { GrammarNote, Drill } from "@/data/grammar-notes";
 import { getGrammarProgress, saveGrammarResult, type GrammarProgress } from "@/lib/storage";
+import { getEffectiveGrammarNotes } from "@/lib/content";
 import { LEVELS, LEVEL_LABEL } from "@/lib/types";
 
 function normalize(s: string): string {
@@ -16,9 +17,11 @@ function normalize(s: string): string {
 export default function GramaticaPage() {
   const [progress, setProgress] = useState<GrammarProgress>({});
   const [open, setOpen] = useState<string | null>(null);
+  const [grammarNotes, setGrammarNotes] = useState<GrammarNote[]>(() => getEffectiveGrammarNotes());
 
   useEffect(() => {
     setProgress(getGrammarProgress());
+    setGrammarNotes(getEffectiveGrammarNotes());
   }, []);
 
   const doneCount = Object.values(progress).filter((p) => p.done).length;
@@ -75,7 +78,7 @@ function RuleCard({
   done,
   onResult,
 }: {
-  note: (typeof grammarNotes)[number];
+  note: GrammarNote;
   isOpen: boolean;
   onToggle: () => void;
   done: boolean;

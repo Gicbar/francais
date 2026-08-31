@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { pronunciationItems } from "@/data/pronunciation";
+import { getEffectivePronunciation } from "@/lib/content";
 import { speakFrench, primeVoices } from "@/lib/speech";
 import { isRecognitionSupported, listenOnce, normalizeForCompare } from "@/lib/recognition";
 
@@ -18,7 +18,7 @@ function shuffle<T>(arr: T[]): T[] {
 type Status = "idle" | "listening" | "match" | "mismatch" | "error";
 
 export default function PronunciacionPage() {
-  const order = useMemo(() => shuffle(pronunciationItems), []);
+  const order = useMemo(() => shuffle(getEffectivePronunciation()), []);
   const [i, setI] = useState(0);
   const [status, setStatus] = useState<Status>("idle");
   const [heard, setHeard] = useState("");

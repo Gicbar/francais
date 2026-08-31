@@ -4,15 +4,18 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { strugglingCards } from "@/lib/deck";
 import { setFocusQueue } from "@/lib/storage";
-import { grammarNotes } from "@/data/grammar-notes";
+import { getEffectiveGrammarNotes } from "@/lib/content";
+import type { GrammarNote } from "@/data/grammar-notes";
 import type { Card, CardState } from "@/lib/types";
 
 export default function ErroresPage() {
   const router = useRouter();
   const [items, setItems] = useState<{ card: Card; state: CardState }[] | null>(null);
+  const [grammarNotes, setGrammarNotes] = useState<GrammarNote[]>(() => getEffectiveGrammarNotes());
 
   useEffect(() => {
     setItems(strugglingCards());
+    setGrammarNotes(getEffectiveGrammarNotes());
   }, []);
 
   function reinforce(ids: string[]) {

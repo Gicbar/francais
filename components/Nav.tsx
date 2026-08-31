@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { checkForContentUpdates } from "@/lib/content";
 
 const links = [
   { href: "/", label: "Hoy" },
@@ -15,6 +17,10 @@ const links = [
 
 export default function Nav() {
   const pathname = usePathname();
+
+  useEffect(() => {
+    checkForContentUpdates();
+  }, []);
 
   return (
     <header className="border-b border-border bg-bg-soft/80 backdrop-blur sticky top-0 z-10">

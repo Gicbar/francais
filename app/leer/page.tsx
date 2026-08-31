@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { seedSentences } from "@/data/sentences";
+import { getEffectiveSentences } from "@/lib/content";
 import { speakFrench, primeVoices } from "@/lib/speech";
 import { addCustomCard, bumpLog, getOrCreateState } from "@/lib/storage";
 import { translateWord } from "@/lib/translate";
@@ -18,7 +18,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function LeerPage() {
-  const order = useMemo(() => shuffle(seedSentences), []);
+  const order = useMemo(() => shuffle(getEffectiveSentences()), []);
   const [i, setI] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [readCount, setReadCount] = useState(0);

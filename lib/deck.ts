@@ -1,7 +1,7 @@
-import { seedCards } from "@/data/cards";
 import type { Card, CardState, Theme, Level } from "@/lib/types";
 import { LEVELS } from "@/lib/types";
-import { getAllStates, getCustomCards, getOrCreateState } from "@/lib/storage";
+import { getAllStates, getCustomCards, getOrCreateState, runMigrations } from "@/lib/storage";
+import { getEffectiveCards } from "@/lib/content";
 import { isDue, todayISO } from "@/lib/srs";
 
 function levelRank(level: Level): number {
@@ -9,7 +9,8 @@ function levelRank(level: Level): number {
 }
 
 export function allCards(): Card[] {
-  return [...seedCards, ...getCustomCards()];
+  runMigrations();
+  return [...getEffectiveCards(), ...getCustomCards()];
 }
 
 export function cardById(id: string): Card | undefined {
@@ -38,45 +39,54 @@ export const SESSION_LENGTHS = {
   30: 55,
 } as const;
 
+// OJO: esta función NO debe escribir estado — se llama desde dueCount() en
+// cada carga del dashboard. Antes llamaba getOrCreateState() para cada
+// tarjeta "fresh", lo que marcaba TODO el mazo como "vence hoy" desde la
+// primera visita (bug real, corregido). Solo se crea estado para las
+// tarjetas que de verdad se seleccionan para una sesión (ver buildSession).
 function dueAndFresh() {
   const cards = allCards();
   const states = getAllStates();
   const today = todayISO();
 
   const due: SessionCard[] = [];
-  const fresh: SessionCard[] = [];
+  const freshCards: Card[] = [];
 
   for (const card of cards) {
     const existing = states[card.id];
     if (existing) {
       if (isDue(existing, today)) due.push({ card, state: existing, isNew: false });
     } else {
-      fresh.push({ card, state: getOrCreateState(card.id), isNew: true });
+      freshCards.push(card);
     }
   }
-  return { due, fresh };
+  return { due, freshCards };
 }
 
 // Introduce tarjetas nuevas nivel por nivel: no aparece ninguna A2 hasta
 // que las A1 sin empezar se agoten (y así sucesivamente) — progresión sin
 // perder de vista que lo básico va primero. Dentro de un mismo nivel, el
 // orden es aleatorio (sort estable sobre un array ya barajado).
-function levelOrderedFresh(fresh: SessionCard[]): SessionCard[] {
-  return shuffle(fresh).sort((a, b) => levelRank(a.card.level) - levelRank(b.card.level));
+function levelOrderedFresh(cards: Card[]): Card[] {
+  return shuffle(cards).sort((a, b) => levelRank(a.level) - levelRank(b.level));
+}
+
+function toSessionCards(cards: Card[]): SessionCard[] {
+  return cards.map((card) => ({ card, state: getOrCreateState(card.id), isNew: true }));
 }
 
 export function buildSession(limit?: number): SessionCard[] {
-  const { due, fresh } = dueAndFresh();
+  const { due, freshCards } = dueAndFresh();
   const shuffledDue = shuffle(due);
 
   if (limit !== undefined) {
     const dueSlice = shuffledDue.slice(0, limit);
     const remaining = Math.max(0, limit - dueSlice.length);
-    const newBatch = levelOrderedFresh(fresh).slice(0, Math.min(remaining, NEW_CARDS_PER_SESSION));
+    const newBatch = toSessionCards(levelOrderedFresh(freshCards).slice(0, Math.min(remaining, NEW_CARDS_PER_SESSION)));
     return shuffle([...dueSlice, ...newBatch]);
   }
 
-  const newBatch = levelOrderedFresh(fresh).slice(0, NEW_CARDS_PER_SESSION);
+  const newBatch = toSessionCards(levelOrderedFresh(freshCards).slice(0, NEW_CARDS_PER_SESSION));
   return shuffle([...shuffledDue, ...newBatch]);
 }
 
@@ -95,8 +105,8 @@ export function buildFocusedSession(ids: string[]): SessionCard[] {
 }
 
 export function dueCount(): number {
-  const { due, fresh } = dueAndFresh();
-  return due.length + Math.min(fresh.length, NEW_CARDS_PER_SESSION);
+  const { due, freshCards } = dueAndFresh();
+  return due.length + Math.min(freshCards.length, NEW_CARDS_PER_SESSION);
 }
 
 export function totalMastered(): number {

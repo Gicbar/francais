@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import { levelProgress } from "@/lib/deck";
 import { LEVELS, LEVEL_LABEL, type Level } from "@/lib/types";
-import { grammarNotes } from "@/data/grammar-notes";
+import type { GrammarNote } from "@/data/grammar-notes";
 import { getGrammarProgress } from "@/lib/storage";
+import { getEffectiveGrammarNotes } from "@/lib/content";
 
 const LEVEL_BLURB: Record<Level, string> = {
   A1: "Lo básico: presentarte, gustos, objetos cotidianos, verbos esenciales.",
@@ -18,9 +19,11 @@ const LEVEL_BLURB: Record<Level, string> = {
 export default function NivelesPage() {
   const [progress, setProgress] = useState<ReturnType<typeof levelProgress> | null>(null);
   const [grammarDone, setGrammarDone] = useState<Record<string, boolean>>({});
+  const [grammarNotes, setGrammarNotes] = useState<GrammarNote[]>(() => getEffectiveGrammarNotes());
 
   useEffect(() => {
     setProgress(levelProgress());
+    setGrammarNotes(getEffectiveGrammarNotes());
     const gp = getGrammarProgress();
     const done: Record<string, boolean> = {};
     Object.entries(gp).forEach(([id, p]) => (done[id] = p.done));

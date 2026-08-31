@@ -1,0 +1,2001 @@
+[
+  {
+    "id": "s1",
+    "fr": "bonjour",
+    "es": "hola / buenos días",
+    "theme": "salutations",
+    "level": "A1"
+  },
+  {
+    "id": "s2",
+    "fr": "enchanté(e)",
+    "es": "mucho gusto (al presentarse, no 'me encanta')",
+    "theme": "salutations",
+    "level": "A1"
+  },
+  {
+    "id": "s3",
+    "fr": "je m'appelle...",
+    "es": "me llamo...",
+    "theme": "salutations",
+    "level": "A1"
+  },
+  {
+    "id": "s4",
+    "fr": "je suis colombien(ne)",
+    "es": "soy colombiano/a",
+    "theme": "salutations",
+    "example": "Je suis colombien, mais j'adore Paris.",
+    "exampleEs": "Soy colombiano, pero amo París.",
+    "level": "A1"
+  },
+  {
+    "id": "c1",
+    "fr": "le rouge",
+    "es": "el rojo",
+    "theme": "couleurs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "c2",
+    "fr": "le noir",
+    "es": "el negro",
+    "theme": "couleurs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "c3",
+    "fr": "le blanc",
+    "es": "el blanco",
+    "theme": "couleurs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "c4",
+    "fr": "la couleur",
+    "es": "el color",
+    "theme": "couleurs",
+    "gender": "f",
+    "example": "Ma couleur préférée est le noir et le rouge.",
+    "exampleEs": "Mi color favorito es el negro y el rojo.",
+    "level": "A1"
+  },
+  {
+    "id": "c5",
+    "fr": "mon bureau est blanc",
+    "es": "mi escritorio es blanco",
+    "theme": "couleurs",
+    "level": "A1"
+  },
+  {
+    "id": "n1",
+    "fr": "le riz",
+    "es": "el arroz",
+    "theme": "nourriture",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "n2",
+    "fr": "le poulet",
+    "es": "el pollo",
+    "theme": "nourriture",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "n3",
+    "fr": "les légumes",
+    "es": "las verduras",
+    "theme": "nourriture",
+    "gender": "pl",
+    "level": "A1"
+  },
+  {
+    "id": "n4",
+    "fr": "le café",
+    "es": "el café",
+    "theme": "nourriture",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "n5",
+    "fr": "l'eau",
+    "es": "el agua",
+    "theme": "nourriture",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "n6",
+    "fr": "j'aime le riz avec du poulet",
+    "es": "me gusta el arroz con pollo",
+    "theme": "nourriture",
+    "level": "A1"
+  },
+  {
+    "id": "n7",
+    "fr": "je déteste les légumes",
+    "es": "odio las verduras",
+    "theme": "nourriture",
+    "level": "A1"
+  },
+  {
+    "id": "b1",
+    "fr": "le bureau",
+    "es": "el escritorio / la oficina",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b2",
+    "fr": "la chaise",
+    "es": "la silla",
+    "theme": "bureau",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "b3",
+    "fr": "l'ordinateur",
+    "es": "el computador",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b4",
+    "fr": "la souris",
+    "es": "el mouse",
+    "theme": "bureau",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "b5",
+    "fr": "le téléphone portable",
+    "es": "el celular",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b6",
+    "fr": "les documents",
+    "es": "los documentos",
+    "theme": "bureau",
+    "gender": "pl",
+    "level": "A1"
+  },
+  {
+    "id": "b7",
+    "fr": "la tasse",
+    "es": "la taza",
+    "theme": "bureau",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "b8",
+    "fr": "l'agenda",
+    "es": "la agenda",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b9",
+    "fr": "les écouteurs",
+    "es": "los audífonos",
+    "theme": "bureau",
+    "gender": "pl",
+    "level": "A1"
+  },
+  {
+    "id": "b10",
+    "fr": "l'imprimante",
+    "es": "la impresora",
+    "theme": "bureau",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "b11",
+    "fr": "le stylo",
+    "es": "el lapicero",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b12",
+    "fr": "le cahier",
+    "es": "el cuaderno",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b13",
+    "fr": "la clé USB",
+    "es": "la memoria USB",
+    "theme": "bureau",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "b14",
+    "fr": "les lunettes",
+    "es": "las gafas",
+    "theme": "bureau",
+    "gender": "pl",
+    "level": "A1"
+  },
+  {
+    "id": "b15",
+    "fr": "le casque",
+    "es": "los audífonos (de diadema)",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b16",
+    "fr": "la calculatrice",
+    "es": "la calculadora",
+    "theme": "bureau",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "b17",
+    "fr": "le livre",
+    "es": "el libro",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b18",
+    "fr": "le chargeur",
+    "es": "el cargador",
+    "theme": "bureau",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "b19",
+    "fr": "la profession",
+    "es": "la profesión",
+    "theme": "bureau",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l1",
+    "fr": "la danse",
+    "es": "el baile",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l2",
+    "fr": "la peinture",
+    "es": "la pintura",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l3",
+    "fr": "le théâtre",
+    "es": "el teatro",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "l4",
+    "fr": "l'opéra",
+    "es": "la ópera",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "l5",
+    "fr": "la lecture",
+    "es": "la lectura",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l6",
+    "fr": "la musique",
+    "es": "la música",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l7",
+    "fr": "le cinéma",
+    "es": "el cine",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "l8",
+    "fr": "la cuisine",
+    "es": "la cocina",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l9",
+    "fr": "les voyages",
+    "es": "los viajes",
+    "theme": "loisirs",
+    "gender": "pl",
+    "level": "A1"
+  },
+  {
+    "id": "l10",
+    "fr": "le sport",
+    "es": "el deporte",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "l11",
+    "fr": "la photographie",
+    "es": "la fotografía",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l12",
+    "fr": "le yoga",
+    "es": "el yoga",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "l13",
+    "fr": "la randonnée",
+    "es": "la caminata / senderismo",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l14",
+    "fr": "les jeux vidéo",
+    "es": "los videojuegos",
+    "theme": "loisirs",
+    "gender": "pl",
+    "level": "A1"
+  },
+  {
+    "id": "l15",
+    "fr": "le jardinage",
+    "es": "la jardinería",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "l16",
+    "fr": "la natation",
+    "es": "la natación",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l17",
+    "fr": "le ski",
+    "es": "el esquí",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "l18",
+    "fr": "le tennis",
+    "es": "el tenis",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "l19",
+    "fr": "l'escalade",
+    "es": "la escalada",
+    "theme": "loisirs",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "l20",
+    "fr": "le football",
+    "es": "el fútbol",
+    "theme": "loisirs",
+    "gender": "m",
+    "level": "A1"
+  },
+  {
+    "id": "v1",
+    "fr": "adorer",
+    "es": "adorar / encantar",
+    "theme": "verbes",
+    "example": "J'adore la danse.",
+    "exampleEs": "Amo el baile.",
+    "level": "A1"
+  },
+  {
+    "id": "v2",
+    "fr": "aimer bien",
+    "es": "gustar (algo, moderado)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v3",
+    "fr": "aimer",
+    "es": "gustar",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v4",
+    "fr": "ne pas aimer",
+    "es": "no gustar",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v5",
+    "fr": "détester",
+    "es": "odiar / detestar",
+    "theme": "verbes",
+    "example": "Je déteste danser.",
+    "exampleEs": "Odio bailar.",
+    "level": "A1"
+  },
+  {
+    "id": "v6",
+    "fr": "je suis / tu es / il est",
+    "es": "yo soy-estoy / tú eres-estás / él es-está (être)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v7",
+    "fr": "nous sommes / vous êtes / ils sont",
+    "es": "nosotros somos / ustedes son / ellos son (être)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v8",
+    "fr": "j'ai / tu as / il a",
+    "es": "yo tengo / tú tienes / él tiene (avoir)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v9",
+    "fr": "nous avons / vous avez / ils ont",
+    "es": "nosotros tenemos / ustedes tienen / ellos tienen (avoir)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v10",
+    "fr": "je vais / tu vas / il va",
+    "es": "yo voy / tú vas / él va (aller)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v11",
+    "fr": "je fais / tu fais / il fait",
+    "es": "yo hago / tú haces / él hace (faire)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v12",
+    "fr": "parler",
+    "es": "hablar",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v13",
+    "fr": "habiter",
+    "es": "vivir (en un lugar)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v14",
+    "fr": "travailler",
+    "es": "trabajar",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v15",
+    "fr": "écouter",
+    "es": "escuchar",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v16",
+    "fr": "regarder",
+    "es": "mirar",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v17",
+    "fr": "manger",
+    "es": "comer",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "v18",
+    "fr": "jouer",
+    "es": "jugar",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "p1",
+    "fr": "mon / ma / mes",
+    "es": "mi / mi / mis (posesivo, según género y número)",
+    "theme": "possessifs",
+    "example": "mon plat préféré, ma couleur préférée",
+    "exampleEs": "mi plato favorito, mi color favorito",
+    "level": "A1"
+  },
+  {
+    "id": "p2",
+    "fr": "ton / ta / tes",
+    "es": "tu / tu / tus",
+    "theme": "possessifs",
+    "level": "A1"
+  },
+  {
+    "id": "p3",
+    "fr": "son / sa / ses",
+    "es": "su / su / sus (de él/ella)",
+    "theme": "possessifs",
+    "level": "A1"
+  },
+  {
+    "id": "p4",
+    "fr": "notre / nos",
+    "es": "nuestro / nuestros",
+    "theme": "possessifs",
+    "level": "A1"
+  },
+  {
+    "id": "p5",
+    "fr": "votre / vos",
+    "es": "su / sus (formal, de ustedes)",
+    "theme": "possessifs",
+    "level": "A1"
+  },
+  {
+    "id": "p6",
+    "fr": "leur / leurs",
+    "es": "su / sus (de ellos/ellas)",
+    "theme": "possessifs",
+    "level": "A1"
+  },
+  {
+    "id": "p7",
+    "fr": "mon amie / mon école",
+    "es": "mi amiga / mi escuela (excepción: fem. + vocal → mon)",
+    "theme": "possessifs",
+    "level": "A1"
+  },
+  {
+    "id": "f1",
+    "fr": "et",
+    "es": "y",
+    "theme": "phrases",
+    "example": "le rouge et le noir",
+    "level": "A1"
+  },
+  {
+    "id": "f2",
+    "fr": "est (verbe être)",
+    "es": "es / está (¡no confundir con 'et'!)",
+    "theme": "phrases",
+    "example": "mon bureau est blanc",
+    "level": "A1"
+  },
+  {
+    "id": "f3",
+    "fr": "mais",
+    "es": "pero",
+    "theme": "phrases",
+    "example": "J'aime la natation mais je n'aime pas le ski.",
+    "exampleEs": "Me gusta la natación pero no me gusta el esquí.",
+    "level": "A1"
+  },
+  {
+    "id": "f4",
+    "fr": "parce que",
+    "es": "porque",
+    "theme": "phrases",
+    "level": "A1"
+  },
+  {
+    "id": "f5",
+    "fr": "aussi",
+    "es": "también",
+    "theme": "phrases",
+    "level": "A1"
+  },
+  {
+    "id": "f6",
+    "fr": "donc",
+    "es": "entonces / por lo tanto",
+    "theme": "phrases",
+    "level": "A1"
+  },
+  {
+    "id": "f7",
+    "fr": "je → j' / ne → n' / le,la → l'",
+    "es": "elisión: delante de vocal o 'h' muda",
+    "theme": "phrases",
+    "example": "j'aime, je n'aime pas, l'opéra",
+    "exampleEs": "me gusta, no me gusta, la ópera",
+    "level": "A1"
+  },
+  {
+    "id": "e1",
+    "fr": "merci / merci beaucoup",
+    "es": "gracias / muchas gracias",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e2",
+    "fr": "s'il vous plaît",
+    "es": "por favor (formal)",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e3",
+    "fr": "excusez-moi / pardon",
+    "es": "disculpe / perdón",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e4",
+    "fr": "comment ça va ?",
+    "es": "¿cómo estás?",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e5",
+    "fr": "à bientôt / à demain",
+    "es": "hasta pronto / hasta mañana",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e6",
+    "fr": "je ne comprends pas",
+    "es": "no entiendo",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e7",
+    "fr": "vous pouvez répéter ?",
+    "es": "¿puede repetir?",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e8",
+    "fr": "qui / quoi / où",
+    "es": "quién / qué / dónde",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e9",
+    "fr": "quand / comment / pourquoi",
+    "es": "cuándo / cómo / por qué",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e10",
+    "fr": "combien",
+    "es": "cuánto",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e11",
+    "fr": "aujourd'hui / demain / hier",
+    "es": "hoy / mañana / ayer",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e12",
+    "fr": "maintenant / plus tard",
+    "es": "ahora / más tarde",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e13",
+    "fr": "lundi, mardi, mercredi",
+    "es": "lunes, martes, miércoles",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e14",
+    "fr": "jeudi, vendredi",
+    "es": "jueves, viernes",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e15",
+    "fr": "samedi, dimanche",
+    "es": "sábado, domingo",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e16",
+    "fr": "un, deux, trois",
+    "es": "uno, dos, tres",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e17",
+    "fr": "quatre, cinq, six",
+    "es": "cuatro, cinco, seis",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e18",
+    "fr": "sept, huit, neuf, dix",
+    "es": "siete, ocho, nueve, diez",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e19",
+    "fr": "vingt, trente, cent",
+    "es": "veinte, treinta, cien",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e20",
+    "fr": "la famille",
+    "es": "la familia",
+    "theme": "essentiel",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "e21",
+    "fr": "la mère / le père",
+    "es": "la madre / el padre",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e22",
+    "fr": "le frère / la sœur",
+    "es": "el hermano / la hermana",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e23",
+    "fr": "un ami / une amie",
+    "es": "un amigo / una amiga",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e24",
+    "fr": "la maison",
+    "es": "la casa",
+    "theme": "essentiel",
+    "gender": "f",
+    "level": "A1"
+  },
+  {
+    "id": "e25",
+    "fr": "pouvoir / vouloir / devoir",
+    "es": "poder / querer / deber",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e26",
+    "fr": "je voudrais...",
+    "es": "quisiera... (pedir algo con cortesía)",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e27",
+    "fr": "il y a",
+    "es": "hay",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e28",
+    "fr": "beaucoup / un peu",
+    "es": "mucho / un poco",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e29",
+    "fr": "toujours / jamais",
+    "es": "siempre / nunca",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e30",
+    "fr": "aujourd'hui, il fait beau",
+    "es": "hoy hace buen tiempo",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e31",
+    "fr": "grand / petit",
+    "es": "grande / pequeño",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e32",
+    "fr": "bon / mauvais",
+    "es": "bueno / malo",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e33",
+    "fr": "nouveau / vieux",
+    "es": "nuevo / viejo",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e34",
+    "fr": "facile / difficile",
+    "es": "fácil / difícil",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e35",
+    "fr": "content / fatigué",
+    "es": "contento / cansado",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e36",
+    "fr": "avec / sans",
+    "es": "con / sin",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e37",
+    "fr": "dans / sur / sous",
+    "es": "dentro de / sobre / debajo de",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e38",
+    "fr": "pour / avant / après",
+    "es": "para / antes / después",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e39",
+    "fr": "prendre / venir / voir",
+    "es": "tomar / venir / ver",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e40",
+    "fr": "savoir / connaître",
+    "es": "saber (un hecho) / conocer (a alguien, un lugar)",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e41",
+    "fr": "il pleut / il neige",
+    "es": "está lloviendo / está nevando",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e42",
+    "fr": "il fait chaud / il fait froid",
+    "es": "hace calor / hace frío",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e43",
+    "fr": "le soleil / les nuages",
+    "es": "el sol / las nubes",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e44",
+    "fr": "quelle heure est-il ?",
+    "es": "¿qué hora es?",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e45",
+    "fr": "il est trois heures",
+    "es": "son las tres",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e46",
+    "fr": "le matin / l'après-midi / le soir",
+    "es": "la mañana / la tarde / la noche",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e47",
+    "fr": "la semaine / le mois / l'année",
+    "es": "la semana / el mes / el año",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e48",
+    "fr": "la voiture / le bus / le train",
+    "es": "el carro / el bus / el tren",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e49",
+    "fr": "l'avion / l'aéroport",
+    "es": "el avión / el aeropuerto",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e50",
+    "fr": "à gauche / à droite / tout droit",
+    "es": "a la izquierda / a la derecha / derecho",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e51",
+    "fr": "où est la gare ?",
+    "es": "¿dónde está la estación?",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e52",
+    "fr": "un billet, s'il vous plaît",
+    "es": "un tiquete, por favor",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e53",
+    "fr": "loin / près",
+    "es": "lejos / cerca",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e54",
+    "fr": "ça coûte combien ?",
+    "es": "¿cuánto cuesta?",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e55",
+    "fr": "c'est cher / c'est pas cher",
+    "es": "es caro / es barato",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e56",
+    "fr": "l'argent / payer",
+    "es": "el dinero / pagar",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e57",
+    "fr": "la carte / en espèces",
+    "es": "la tarjeta / en efectivo",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e58",
+    "fr": "le magasin / le marché",
+    "es": "la tienda / el mercado",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e59",
+    "fr": "la tête / le ventre / le dos",
+    "es": "la cabeza / el estómago / la espalda",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e60",
+    "fr": "j'ai mal à la tête",
+    "es": "me duele la cabeza",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e61",
+    "fr": "je suis malade / je vais bien",
+    "es": "estoy enfermo / estoy bien",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e62",
+    "fr": "le médecin / la pharmacie",
+    "es": "el médico / la farmacia",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e63",
+    "fr": "envoyer un message",
+    "es": "enviar un mensaje",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e64",
+    "fr": "chercher / trouver",
+    "es": "buscar / encontrar",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e65",
+    "fr": "commencer / finir",
+    "es": "empezar / terminar",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e66",
+    "fr": "le mot de passe",
+    "es": "la contraseña",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e67",
+    "fr": "internet / le wifi",
+    "es": "internet / el wifi",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e68",
+    "fr": "une réunion",
+    "es": "una reunión",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e69",
+    "fr": "heureux / triste",
+    "es": "feliz / triste",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e70",
+    "fr": "occupé / libre",
+    "es": "ocupado / libre",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e71",
+    "fr": "important / inutile",
+    "es": "importante / inútil",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e72",
+    "fr": "si / alors",
+    "es": "si / entonces",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "e73",
+    "fr": "d'abord / ensuite / enfin",
+    "es": "primero / luego / finalmente",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c11-1",
+    "fr": "nous faisons / vous faites / ils font",
+    "es": "nosotros hacemos / ustedes hacen / ellos hacen (faire)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "c11-2",
+    "fr": "je veux / tu veux / il veut",
+    "es": "yo quiero / tú quieres / él quiere (vouloir)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "c11-3",
+    "fr": "nous voulons / vous voulez / ils veulent",
+    "es": "nosotros queremos / ustedes quieren / ellos quieren (vouloir)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "c11-4",
+    "fr": "faire du sport / faire de la musculation",
+    "es": "hacer deporte / hacer musculación",
+    "theme": "essentiel",
+    "example": "Je fais du sport le matin.",
+    "exampleEs": "Hago deporte por la mañana.",
+    "level": "A1"
+  },
+  {
+    "id": "c11-5",
+    "fr": "faire des exercices / faire de l'exercice",
+    "es": "hacer ejercicios / hacer ejercicio",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c11-6",
+    "fr": "ne pas faire de bruit",
+    "es": "no hacer ruido (de/d' en negativo)",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c11-7",
+    "fr": "il est midi / il est minuit",
+    "es": "es mediodía / es medianoche",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c11-8",
+    "fr": "il est neuf heures quinze",
+    "es": "son las nueve y cuarto",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c11-9",
+    "fr": "il est dix heures moins le quart",
+    "es": "son las diez menos cuarto",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c11-10",
+    "fr": "le week-end",
+    "es": "el fin de semana",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c11-11",
+    "fr": "le musée",
+    "es": "el museo",
+    "theme": "loisirs",
+    "level": "A1"
+  },
+  {
+    "id": "c11-12",
+    "fr": "la piscine",
+    "es": "la piscina",
+    "theme": "loisirs",
+    "level": "A1"
+  },
+  {
+    "id": "c11-13",
+    "fr": "le restaurant / le bar",
+    "es": "el restaurante / el bar",
+    "theme": "loisirs",
+    "level": "A1"
+  },
+  {
+    "id": "c11-14",
+    "fr": "aller au cinéma / aller à la piscine",
+    "es": "ir al cine / ir a la piscina",
+    "theme": "essentiel",
+    "example": "Je veux aller au théâtre, tu veux venir ?",
+    "exampleEs": "Quiero ir al teatro, ¿quieres venir?",
+    "level": "A1"
+  },
+  {
+    "id": "c11-15",
+    "fr": "le fuseau horaire",
+    "es": "la zona horaria",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "a2-1",
+    "fr": "hier soir / la semaine dernière",
+    "es": "anoche / la semana pasada",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-2",
+    "fr": "il y a deux jours",
+    "es": "hace dos días",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-3",
+    "fr": "demain / la semaine prochaine",
+    "es": "mañana / la próxima semana",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-4",
+    "fr": "bientôt / dans un mois",
+    "es": "pronto / en un mes",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-5",
+    "fr": "déjà / pas encore",
+    "es": "ya / todavía no",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-6",
+    "fr": "pendant / depuis",
+    "es": "durante / desde",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-7",
+    "fr": "se réveiller / se lever",
+    "es": "despertarse / levantarse",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-8",
+    "fr": "se doucher / s'habiller",
+    "es": "ducharse / vestirse",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-9",
+    "fr": "se coucher / se reposer",
+    "es": "acostarse / descansar",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-10",
+    "fr": "se dépêcher",
+    "es": "apurarse",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-11",
+    "fr": "s'appeler / se souvenir de",
+    "es": "llamarse / acordarse de",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-12",
+    "fr": "je pense que / je crois que",
+    "es": "pienso que / creo que",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-13",
+    "fr": "je trouve que / à mon avis",
+    "es": "me parece que / en mi opinión",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-14",
+    "fr": "je suis d'accord / pas d'accord",
+    "es": "estoy de acuerdo / en desacuerdo",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-15",
+    "fr": "ça dépend",
+    "es": "depende",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-16",
+    "fr": "je préfère / je préférerais",
+    "es": "prefiero / preferiría",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-17",
+    "fr": "cependant / pourtant",
+    "es": "sin embargo",
+    "theme": "phrases",
+    "level": "A2"
+  },
+  {
+    "id": "a2-18",
+    "fr": "par contre",
+    "es": "en cambio",
+    "theme": "phrases",
+    "level": "A2"
+  },
+  {
+    "id": "a2-19",
+    "fr": "en fait",
+    "es": "de hecho",
+    "theme": "phrases",
+    "level": "A2"
+  },
+  {
+    "id": "a2-20",
+    "fr": "par exemple",
+    "es": "por ejemplo",
+    "theme": "phrases",
+    "level": "A2"
+  },
+  {
+    "id": "a2-21",
+    "fr": "grâce à / à cause de",
+    "es": "gracias a / por culpa de",
+    "theme": "phrases",
+    "level": "A2"
+  },
+  {
+    "id": "a2-22",
+    "fr": "malgré",
+    "es": "a pesar de",
+    "theme": "phrases",
+    "level": "A2"
+  },
+  {
+    "id": "a2-23",
+    "fr": "plus... que / moins... que",
+    "es": "más... que / menos... que",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-24",
+    "fr": "aussi... que",
+    "es": "tan... como",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-25",
+    "fr": "le plus / le meilleur",
+    "es": "el más / el mejor",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-26",
+    "fr": "je le connais / je la connais",
+    "es": "lo conozco / la conozco",
+    "theme": "essentiel",
+    "example": "Ce livre, je le connais bien.",
+    "exampleEs": "Ese libro, lo conozco bien.",
+    "level": "A2"
+  },
+  {
+    "id": "a2-27",
+    "fr": "je lui parle / je leur parle",
+    "es": "le hablo (a él/ella) / les hablo (a ellos)",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-28",
+    "fr": "j'en ai besoin",
+    "es": "lo necesito (de eso)",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-29",
+    "fr": "j'y pense",
+    "es": "pienso en eso",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-30",
+    "fr": "le problème / la solution",
+    "es": "el problema / la solución",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-31",
+    "fr": "le changement / l'expérience",
+    "es": "el cambio / la experiencia",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-32",
+    "fr": "la raison / le but",
+    "es": "la razón / el objetivo",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-33",
+    "fr": "l'avantage / l'inconvénient",
+    "es": "la ventaja / la desventaja",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-34",
+    "fr": "la décision / le choix",
+    "es": "la decisión / la elección",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-35",
+    "fr": "ça vaut la peine",
+    "es": "vale la pena",
+    "theme": "phrases",
+    "level": "A2"
+  },
+  {
+    "id": "a2-36",
+    "fr": "ça marche",
+    "es": "funciona / está bien (coloquial)",
+    "theme": "phrases",
+    "level": "A2"
+  },
+  {
+    "id": "a2-37",
+    "fr": "avoir raison / avoir tort",
+    "es": "tener razón / estar equivocado",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-38",
+    "fr": "avoir envie de",
+    "es": "tener ganas de",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-39",
+    "fr": "avoir besoin de",
+    "es": "tener necesidad de / necesitar",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-40",
+    "fr": "tomber amoureux / tomber malade",
+    "es": "enamorarse / enfermarse",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-41",
+    "fr": "devenir / rester",
+    "es": "convertirse en / quedarse",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-42",
+    "fr": "essayer / réussir à",
+    "es": "intentar / lograr",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-43",
+    "fr": "décider de / oublier de",
+    "es": "decidir / olvidar",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-44",
+    "fr": "s'inquiéter / se détendre",
+    "es": "preocuparse / relajarse",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "a2-45",
+    "fr": "améliorer / empirer",
+    "es": "mejorar / empeorar",
+    "theme": "essentiel",
+    "level": "A2"
+  },
+  {
+    "id": "B1-1",
+    "fr": "quand j'étais petit(e)",
+    "es": "cuando era pequeño/a",
+    "theme": "essentiel",
+    "example": "Quand j'étais petit, j'habitais à la montagne.",
+    "exampleEs": "Cuando era pequeño, vivía en la montaña.",
+    "level": "B1"
+  },
+  {
+    "id": "B1-2",
+    "fr": "avant, je... / maintenant, je...",
+    "es": "antes, yo... / ahora, yo... (contraste de hábitos)",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-3",
+    "fr": "je voudrais / j'aimerais (conditionnel)",
+    "es": "quisiera / me gustaría",
+    "theme": "verbes",
+    "level": "B1"
+  },
+  {
+    "id": "B1-4",
+    "fr": "si j'avais le temps, je...",
+    "es": "si tuviera tiempo, yo... (hipótesis)",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-5",
+    "fr": "à ta place, je...",
+    "es": "en tu lugar, yo... (consejo)",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-6",
+    "fr": "bien que / quoique",
+    "es": "aunque (+ subjonctif)",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-7",
+    "fr": "tandis que / alors que",
+    "es": "mientras que (contraste)",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-8",
+    "fr": "néanmoins / toutefois",
+    "es": "sin embargo / no obstante",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-9",
+    "fr": "malgré tout",
+    "es": "a pesar de todo",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-10",
+    "fr": "quant à",
+    "es": "en cuanto a",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-11",
+    "fr": "il est vrai que... mais",
+    "es": "es verdad que... pero",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-12",
+    "fr": "dans l'ensemble",
+    "es": "en general, en conjunto",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-13",
+    "fr": "les actualités / les informations",
+    "es": "las noticias",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-14",
+    "fr": "un article / une émission",
+    "es": "un artículo / un programa (TV/radio)",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-15",
+    "fr": "selon / d'après",
+    "es": "según / de acuerdo con",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-16",
+    "fr": "un sondage",
+    "es": "una encuesta",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-17",
+    "fr": "la société",
+    "es": "la sociedad",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-18",
+    "fr": "l'environnement / le climat",
+    "es": "el medio ambiente / el clima",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-19",
+    "fr": "polluer / recycler",
+    "es": "contaminar / reciclar",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-20",
+    "fr": "durable / renouvelable",
+    "es": "sostenible / renovable",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-21",
+    "fr": "le réchauffement climatique",
+    "es": "el calentamiento global",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-22",
+    "fr": "économiser l'énergie",
+    "es": "ahorrar energía",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-23",
+    "fr": "sociable / timide",
+    "es": "sociable / tímido",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-24",
+    "fr": "ambitieux / paresseux",
+    "es": "ambicioso / perezoso",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-25",
+    "fr": "patient / têtu",
+    "es": "paciente / terco",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-26",
+    "fr": "honnête / franc",
+    "es": "honesto / franco",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-27",
+    "fr": "sensible / généreux",
+    "es": "sensible / generoso",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-28",
+    "fr": "réserver un hôtel / un vol",
+    "es": "reservar un hotel / un vuelo",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-29",
+    "fr": "l'hébergement",
+    "es": "el alojamiento",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-30",
+    "fr": "la douane / le passeport",
+    "es": "la aduana / el pasaporte",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-31",
+    "fr": "un itinéraire",
+    "es": "un itinerario",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-32",
+    "fr": "annuler / reporter",
+    "es": "cancelar / posponer",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-33",
+    "fr": "un contrat / le salaire",
+    "es": "un contrato / el salario",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-34",
+    "fr": "une formation / un stage",
+    "es": "una capacitación / una pasantía",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-35",
+    "fr": "un collègue / le patron",
+    "es": "un colega / el jefe",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-36",
+    "fr": "postuler à un emploi",
+    "es": "postularse a un empleo",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-37",
+    "fr": "démissionner / être licencié",
+    "es": "renunciar / ser despedido",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-38",
+    "fr": "une maladie / un symptôme",
+    "es": "una enfermedad / un síntoma",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-39",
+    "fr": "se soigner / guérir",
+    "es": "cuidarse / curarse",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-40",
+    "fr": "prendre rendez-vous chez le médecin",
+    "es": "pedir cita con el médico",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-41",
+    "fr": "une ordonnance",
+    "es": "una receta médica",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-42",
+    "fr": "se disputer / se réconcilier",
+    "es": "pelearse / reconciliarse",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-43",
+    "fr": "la confiance / le respect",
+    "es": "la confianza / el respeto",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-44",
+    "fr": "tomber amoureux de",
+    "es": "enamorarse de",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-45",
+    "fr": "rompre / se marier",
+    "es": "romper / casarse",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-46",
+    "fr": "télécharger / publier",
+    "es": "descargar / publicar",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-47",
+    "fr": "un réseau social",
+    "es": "una red social",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-48",
+    "fr": "la sécurité en ligne",
+    "es": "la seguridad en línea",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-49",
+    "fr": "partager / commenter",
+    "es": "compartir / comentar",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-50",
+    "fr": "il paraît que / il semble que",
+    "es": "parece que / al parecer",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-51",
+    "fr": "se rendre compte de",
+    "es": "darse cuenta de",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-52",
+    "fr": "avoir tendance à",
+    "es": "tender a",
+    "theme": "essentiel",
+    "level": "B1"
+  },
+  {
+    "id": "B1-53",
+    "fr": "il vaut mieux que (+ subjonctif)",
+    "es": "es mejor que",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-54",
+    "fr": "il faut que (+ subjonctif)",
+    "es": "hace falta que / hay que",
+    "theme": "phrases",
+    "level": "B1"
+  },
+  {
+    "id": "B1-55",
+    "fr": "au fur et à mesure",
+    "es": "a medida que, poco a poco",
+    "theme": "phrases",
+    "level": "B1"
+  }
+]

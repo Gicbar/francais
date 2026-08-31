@@ -110,6 +110,32 @@ const a1Notes: RawNote[] = [
       { prompt: "___opéra est magnifique. (el/la, delante de vocal)", answers: ["l'"] },
     ],
   },
+  {
+    id: "g-de-contracte",
+    title: "du / de la / de l' / des (de + artículo, con faire)",
+    wrong: "Je fais le sport. Je fais la musculation.",
+    right: "Je fais du sport. Je fais de la musculation.",
+    why: "Con faire + actividad, 'de' se combina con el artículo: de+le→du, de+la→de la (no cambia), de+l'→de l', de+les→des. En negativo, todos se reducen a 'de' (o 'd'' delante de vocal): je ne fais pas de sport.",
+    cardIds: ["c11-4", "c11-5", "c11-6"],
+    drills: [
+      { prompt: "Je fais ___ sport. (de+le)", answers: ["du"] },
+      { prompt: "Elle fait ___ musculation. (de+la)", answers: ["de la"] },
+      { prompt: "Nous ne faisons pas ___ bruit. (negativo)", answers: ["de"] },
+    ],
+  },
+  {
+    id: "g-a-contracte",
+    title: "au / à la / à l' / aux (à + artículo, con aller)",
+    wrong: "Je vais à le cinéma. Je vais à les Tuileries.",
+    right: "Je vais au cinéma. Je vais aux Tuileries.",
+    why: "Con aller + lugar, 'à' se combina con el artículo: à+le→au, à+la→à la (no cambia), à+l'→à l', à+les→aux. 'à le' y 'à les' nunca existen en francés correcto.",
+    cardIds: ["c11-14"],
+    drills: [
+      { prompt: "Je vais ___ cinéma. (à+le)", answers: ["au"] },
+      { prompt: "Je vais ___ piscine. (à+la)", answers: ["à la"] },
+      { prompt: "Je vais ___ Tuileries. (à+les, plural)", answers: ["aux"] },
+    ],
+  },
 ];
 
 // --- Nivel A2 ---
@@ -168,6 +194,62 @@ const a2Notes: RawNote[] = [
   },
 ];
 
+// --- Nivel B1 ---
+const b1Notes: RawNote[] = [
+  {
+    id: "g-imparfait-vs-pc",
+    title: "Imparfait vs passé composé",
+    wrong: "Hier, je regardais un film quand tu as téléphoné. (mezclado sin criterio)",
+    right: "Hier, je regardais un film quand tu as téléphoné.",
+    why: "El passé composé cuenta una acción puntual y terminada (tu as téléphoné = pasó una vez). El imparfait describe el fondo, algo en curso o un hábito (je regardais = ya estaba pasando cuando ocurrió lo otro). Truco: si en español dirías '-aba/-ía' (contexto) es imparfait; si dirías un pretérito puntual, es passé composé.",
+    cardIds: ["B1-1", "B1-2"],
+    drills: [
+      { prompt: "Quand j'___ (être) petit, j'habitais à Paris. (descripción de fondo)", answers: ["étais"] },
+      { prompt: "Hier, il ___ (pleuvoir) toute la journée. (fondo continuo)", answers: ["pleuvait"] },
+      { prompt: "Soudain, elle ___ (partir). (acción puntual)", answers: ["est partie"] },
+    ],
+  },
+  {
+    id: "g-conditionnel",
+    title: "Conditionnel présent: deseos y consejos corteses",
+    wrong: "Je veux un café, s'il vous plaît. (demasiado directo)",
+    right: "Je voudrais un café, s'il vous plaît.",
+    why: "El conditionnel (radical del futuro + terminaciones del imparfait: -ais, -ais, -ait, -ions, -iez, -aient) suaviza peticiones y expresa deseos o consejos: je voudrais (quisiera), tu devrais (deberías), à ta place je ferais (yo en tu lugar haría). Mucho más cortés que el presente.",
+    cardIds: ["B1-3", "B1-5"],
+    drills: [
+      { prompt: "Je ___ (vouloir) un thé, s'il vous plaît. (cortés)", answers: ["voudrais"] },
+      { prompt: "Tu ___ (devoir) dormir plus. (deberías)", answers: ["devrais"] },
+      { prompt: "À ta place, je ___ (partir) tôt. (yo en tu lugar)", answers: ["partirais"] },
+    ],
+  },
+  {
+    id: "g-subjonctif-il-faut",
+    title: "Subjonctif después de il faut que / il vaut mieux que",
+    wrong: "Il faut que tu vas au rendez-vous.",
+    right: "Il faut que tu ailles au rendez-vous.",
+    why: "Después de expresiones de obligación/necesidad como 'il faut que' o 'il vaut mieux que', el verbo va en subjonctif, no en indicativo. Muchos verbos comunes son irregulares en subjonctif: aller→aille, être→sois, avoir→aie, faire→fasse.",
+    cardIds: ["B1-53", "B1-54"],
+    drills: [
+      { prompt: "Il faut que tu ___ (aller) chez le médecin.", answers: ["ailles"] },
+      { prompt: "Il faut que je ___ (être) à l'heure.", answers: ["sois"] },
+      { prompt: "Il vaut mieux que nous ___ (avoir) un plan B.", answers: ["ayons"] },
+    ],
+  },
+  {
+    id: "g-pronoms-relatifs",
+    title: "Pronombres relativos: qui / que / où",
+    wrong: "Le livre que est sur la table est à moi.",
+    right: "Le livre qui est sur la table est à moi.",
+    why: "'qui' reemplaza el SUJETO de la frase relativa (le livre qui est... — el libro ES el que está). 'que' reemplaza el COMPLEMENTO directo (le livre que je lis — YO leo el libro). 'où' reemplaza un lugar o momento (la ville où j'habite).",
+    cardIds: [],
+    drills: [
+      { prompt: "C'est le film ___ j'ai vu hier. (complemento: yo vi el film)", answers: ["que"] },
+      { prompt: "C'est la personne ___ travaille avec moi. (sujeto: ella trabaja)", answers: ["qui"] },
+      { prompt: "C'est la ville ___ je suis né. (lugar)", answers: ["où"] },
+    ],
+  },
+];
+
 function withLevel(level: Level) {
   return (n: RawNote): GrammarNote => ({ ...n, level });
 }
@@ -175,4 +257,5 @@ function withLevel(level: Level) {
 export const grammarNotes: GrammarNote[] = [
   ...a1Notes.map(withLevel("A1")),
   ...a2Notes.map(withLevel("A2")),
+  ...b1Notes.map(withLevel("B1")),
 ];

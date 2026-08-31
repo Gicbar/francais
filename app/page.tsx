@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { dueCount, totalMastered, totalStarted, categoryProgress, strugglingCards, levelProgress } from "@/lib/deck";
 import { getStreak, getAudioPlays, lifetimeSentencesRead, getGrammarProgress } from "@/lib/storage";
-import { seedSentences } from "@/data/sentences";
-import { grammarNotes } from "@/data/grammar-notes";
+import { getEffectiveSentences, getEffectiveGrammarNotes } from "@/lib/content";
 import { LEVELS } from "@/lib/types";
 import GoalRing from "@/components/GoalRing";
 
@@ -18,7 +17,14 @@ export default function Home() {
     struggling: number;
   } | null>(null);
   const [cat, setCat] = useState<
-    (ReturnType<typeof categoryProgress> & { audio: number; sentencesRead: number; grammarDone: number }) | null
+    | (ReturnType<typeof categoryProgress> & {
+        audio: number;
+        sentencesRead: number;
+        sentencesTotal: number;
+        grammarDone: number;
+        grammarTotal: number;
+      })
+    | null
   >(null);
   const [currentLevel, setCurrentLevel] = useState<string | null>(null);
 
@@ -31,7 +37,14 @@ export default function Home() {
       struggling: strugglingCards().length,
     });
     const grammarDone = Object.values(getGrammarProgress()).filter((p) => p.done).length;
-    setCat({ ...categoryProgress(), audio: getAudioPlays(), sentencesRead: lifetimeSentencesRead(), grammarDone });
+    setCat({
+      ...categoryProgress(),
+      audio: getAudioPlays(),
+      sentencesRead: lifetimeSentencesRead(),
+      sentencesTotal: getEffectiveSentences().length,
+      grammarDone,
+      grammarTotal: getEffectiveGrammarNotes().length,
+    });
 
     const lp = levelProgress();
     const active = LEVELS.find((l) => lp[l].total > 0 && lp[l].started < lp[l].total) ?? LEVELS.find((l) => lp[l].total > 0);
@@ -137,8 +150,8 @@ export default function Home() {
             href="/gramatica"
             icon="✏️"
             label="Gramática"
-            detail={cat ? `${cat.grammarDone} reglas dominadas de ${grammarNotes.length}` : "…"}
-            pct={cat ? pct(cat.grammarDone, grammarNotes.length) : 0}
+            detail={cat ? `${cat.grammarDone} reglas dominadas de ${cat.grammarTotal}` : "…"}
+            pct={cat ? pct(cat.grammarDone, cat.grammarTotal) : 0}
             color="dusk"
           />
           <ProgressRow
@@ -146,7 +159,7 @@ export default function Home() {
             icon="👂"
             label="Comprensión"
             detail={cat ? `${cat.sentencesRead} frases leídas en total` : "…"}
-            pct={cat ? pct(cat.sentencesRead, seedSentences.length) : 0}
+            pct={cat ? pct(cat.sentencesRead, cat.sentencesTotal) : 0}
             color="sage"
           />
           <ProgressRow

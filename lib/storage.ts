@@ -11,6 +11,7 @@ const KEYS = {
   audioPlays: "fr.audioPlays.v1",
   focus: "fr.focusQueue.v1",
   grammar: "fr.grammarProgress.v1",
+  migrations: "fr.migrations.v1",
 };
 
 function read<T>(key: string, fallback: T): T {
@@ -160,4 +161,27 @@ export function popFocusQueue(): string[] {
   const ids = read<string[]>(KEYS.focus, []);
   write(KEYS.focus, []);
   return ids;
+}
+
+// --- Migraciones de una sola vez, para reparar datos de versiones con bugs ---
+export function runMigrations() {
+  const done = read<string[]>(KEYS.migrations, []);
+
+  if (!done.includes("fix-eager-state-creation")) {
+    // Bug real: dueAndFresh() creaba estado SRS para cada tarjeta sin
+    // repasar con solo abrir el dashboard, marcando todo el mazo como
+    // "vence hoy" desde la primera visita. Un estado nunca tocado por el
+    // usuario no tiene lastReviewed — se borra para devolverle a la
+    // tarjeta su condición real de "nueva, no vista todavía".
+    const states = getAllStates();
+    let changed = false;
+    for (const id of Object.keys(states)) {
+      if (!states[id].lastReviewed) {
+        delete states[id];
+        changed = true;
+      }
+    }
+    if (changed) write(KEYS.states, states);
+    write(KEYS.migrations, [...done, "fix-eager-state-creation"]);
+  }
 }
