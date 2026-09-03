@@ -4,7 +4,16 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { getEffectiveListening } from "@/lib/content";
 import { LISTENING_THEME_LABEL, type Listening } from "@/data/listening";
-import { speakSequence, primeVoices } from "@/lib/speech";
+import {
+  primeVoices,
+  playDialogue,
+  dialoguePause,
+  dialogueResume,
+  dialogueNext,
+  dialoguePrev,
+  dialogueStop,
+  type DialoguePlayerState,
+} from "@/lib/speech";
 import { markListeningDone } from "@/lib/storage";
 import { LEVELS, type Level } from "@/lib/types";
 
@@ -24,6 +33,8 @@ export default function EscucharPage() {
   const [showTranscript, setShowTranscript] = useState(false);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [doneCount, setDoneCount] = useState(0);
+  const [playState, setPlayState] = useState<DialoguePlayerState>("idle");
+  const [lineIndex, setLineIndex] = useState(0);
 
   const filtered = useMemo(
     () => (levelFilter === "todos" ? all : all.filter((l) => l.level === levelFilter)),
@@ -33,6 +44,7 @@ export default function EscucharPage() {
 
   useEffect(() => {
     primeVoices();
+    return () => dialogueStop();
   }, []);
 
   useEffect(() => {
@@ -41,16 +53,44 @@ export default function EscucharPage() {
   }, [levelFilter]);
 
   function resetForNew() {
+    dialogueStop();
+    setPlayState("idle");
+    setLineIndex(0);
     setShowTranscript(false);
     setAnswers({});
   }
 
   function play() {
     if (!item) return;
-    speakSequence(
+    playDialogue(
       item.lines.map((l) => ({ text: l.fr, pitch: l.speaker === "A" ? 1.12 : 0.88 })),
-      { userInitiated: true }
+      { userInitiated: true },
+      {
+        onIndexChange: setLineIndex,
+        onStateChange: setPlayState,
+        onEnd: () => setPlayState("idle"),
+      }
     );
+  }
+
+  function togglePlayPause() {
+    if (playState === "playing") {
+      dialoguePause();
+    } else if (playState === "paused") {
+      dialogueResume();
+    } else {
+      play();
+    }
+  }
+
+  function goPrev() {
+    if (playState === "idle") return;
+    dialoguePrev();
+  }
+
+  function goNext() {
+    if (playState === "idle") return;
+    dialogueNext();
   }
 
   function answer(qIdx: number, optIdx: number) {
@@ -68,6 +108,8 @@ export default function EscucharPage() {
     resetForNew();
     setI((v) => v + 1);
   }
+
+  const playPauseLabel = playState === "playing" ? "⏸" : "▶";
 
   if (!item) {
     return (
@@ -121,12 +163,38 @@ export default function EscucharPage() {
           </p>
         </div>
 
-        <button
-          onClick={play}
-          className="self-center rounded-full bg-ink text-bg px-7 py-3 text-sm font-medium hover:opacity-90 transition-opacity shadow-soft"
-        >
-          🔊 Escuchar el diálogo
-        </button>
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={goPrev}
+              disabled={playState === "idle"}
+              aria-label="Línea anterior"
+              className="rounded-full border border-border text-ink-soft w-10 h-10 flex items-center justify-center hover:text-ink hover:bg-surface transition-colors disabled:opacity-40"
+            >
+              ⏮
+            </button>
+            <button
+              onClick={togglePlayPause}
+              aria-label={playState === "playing" ? "Pausar" : "Reproducir"}
+              className="rounded-full bg-ink text-bg w-14 h-14 flex items-center justify-center text-lg hover:opacity-90 transition-opacity shadow-soft"
+            >
+              {playPauseLabel}
+            </button>
+            <button
+              onClick={goNext}
+              disabled={playState === "idle"}
+              aria-label="Línea siguiente"
+              className="rounded-full border border-border text-ink-soft w-10 h-10 flex items-center justify-center hover:text-ink hover:bg-surface transition-colors disabled:opacity-40"
+            >
+              ⏭
+            </button>
+          </div>
+          {playState !== "idle" && (
+            <span className="text-[11px] text-ink-faint">
+              Línea {lineIndex + 1} / {item.lines.length}
+            </span>
+          )}
+        </div>
 
         <div className="flex flex-col gap-4">
           {item.questions.map((q, qIdx) => (
