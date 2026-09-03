@@ -9,6 +9,8 @@ const KEYS = {
   streak: "fr.streak.v1",
   goal: "fr.dailyGoal.v1",
   audioPlays: "fr.audioPlays.v1",
+  storiesRead: "fr.storiesRead.v1",
+  listeningDone: "fr.listeningDone.v1",
   focus: "fr.focusQueue.v1",
   grammar: "fr.grammarProgress.v1",
   migrations: "fr.migrations.v1",
@@ -136,6 +138,26 @@ export function bumpAudioPlays() {
 
 export function getAudioPlays(): number {
   return read<number>(KEYS.audioPlays, 0);
+}
+
+// --- Historias leídas (módulo /historias) ---
+export function getStoriesReadIds(): string[] {
+  return read<string[]>(KEYS.storiesRead, []);
+}
+
+export function markStoryRead(id: string) {
+  const ids = getStoriesReadIds();
+  if (!ids.includes(id)) write(KEYS.storiesRead, [...ids, id]);
+}
+
+// --- Diálogos de comprensión oral completados (módulo /escuchar) ---
+export function getListeningDoneIds(): string[] {
+  return read<string[]>(KEYS.listeningDone, []);
+}
+
+export function markListeningDone(id: string) {
+  const ids = getListeningDoneIds();
+  if (!ids.includes(id)) write(KEYS.listeningDone, [...ids, id]);
 }
 
 // --- Cola de refuerzo: ids de tarjetas para una sesión enfocada (p.ej. desde "Mis errores") ---

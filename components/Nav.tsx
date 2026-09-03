@@ -9,6 +9,8 @@ const links = [
   { href: "/", label: "Hoy" },
   { href: "/review", label: "Repasar" },
   { href: "/leer", label: "Leer" },
+  { href: "/historias", label: "Historias" },
+  { href: "/escuchar", label: "Escuchar" },
   { href: "/gramatica", label: "Gramática" },
   { href: "/pronunciacion", label: "Pronunciar" },
   { href: "/errores", label: "Errores" },

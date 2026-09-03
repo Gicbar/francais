@@ -270,6 +270,90 @@
     "level": "A1"
   },
   {
+    "id": "g-prepositions-pays",
+    "title": "Prépositions devant les pays et les villes (venir / habiter)",
+    "wrong": "Je viens de Maroc. J'habite à France.",
+    "right": "Je viens du Maroc. J'habite en France.",
+    "why": "La preposición depende del género del país: masculino → du (venir) / au (habiter, aller); femenino o que empieza por vocal → de/d' (venir) / en (habiter, aller); plural → des (venir) / aux (habiter, aller); ciudad → de/d' (venir) / à (habiter, aller). 'à France' o 'de Maroc' sin artículo son errores típicos.",
+    "cardIds": [
+      "c13-7",
+      "c13-8",
+      "c13-9",
+      "c13-10"
+    ],
+    "drills": [
+      {
+        "prompt": "Je viens ___ Maroc. (país masculino)",
+        "answers": [
+          "du"
+        ]
+      },
+      {
+        "prompt": "J'habite ___ Maroc. (país masculino)",
+        "answers": [
+          "au"
+        ]
+      },
+      {
+        "prompt": "Je viens ___ Turquie. (país femenino)",
+        "answers": [
+          "de"
+        ]
+      },
+      {
+        "prompt": "J'habite ___ Turquie. (país femenino)",
+        "answers": [
+          "en"
+        ]
+      },
+      {
+        "prompt": "Je viens ___ États-Unis. (país plural)",
+        "answers": [
+          "des"
+        ]
+      },
+      {
+        "prompt": "J'habite ___ Bogotá. (ciudad)",
+        "answers": [
+          "à"
+        ]
+      }
+    ],
+    "level": "A1"
+  },
+  {
+    "id": "g-pouvoir",
+    "title": "pouvoir (irregular): je peux, nous pouvons",
+    "wrong": "Nous pouvez venir jeudi.",
+    "right": "Nous pouvons venir jeudi.",
+    "why": "pouvoir es irregular: je peux, tu peux, il peut (radical peu-), pero nous pouvons, vous pouvez, ils peuvent (radical pouv-/peuv-). Es un error común mezclar el radical del singular con las terminaciones del plural.",
+    "cardIds": [
+      "c14-1",
+      "c14-2"
+    ],
+    "drills": [
+      {
+        "prompt": "Est-ce que tu ___ (pouvoir) te libérer mardi ?",
+        "answers": [
+          "peux"
+        ]
+      },
+      {
+        "prompt": "Nous ne ___ (pouvoir) pas nous voir jeudi.",
+        "answers": [
+          "pouvons"
+        ]
+      },
+      {
+        "prompt": "Ils ___ (pouvoir) confirmer demain matin.",
+        "answers": [
+          "peuvent"
+        ]
+      }
+    ],
+    "level": "A1"
+  },
+  {
     "id": "g-passe-compose-avoir",
     "title": "Passé composé con avoir",
     "wrong": "Hier, je regarde un film.",

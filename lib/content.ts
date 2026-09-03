@@ -8,6 +8,8 @@ import { seedCards as bundledCards } from "@/data/cards";
 import { seedSentences as bundledSentences } from "@/data/sentences";
 import { grammarNotes as bundledGrammarNotes, type GrammarNote } from "@/data/grammar-notes";
 import { pronunciationItems as bundledPronunciation, type PronunciationItem } from "@/data/pronunciation";
+import { seedStories as bundledStories, type Story } from "@/data/stories";
+import { seedListening as bundledListening, type Listening } from "@/data/listening";
 import type { Card, Sentence } from "@/lib/types";
 
 const REMOTE_BASE =
@@ -22,6 +24,8 @@ type CachedContent = {
   sentences: Sentence[];
   grammarNotes: GrammarNote[];
   pronunciation: PronunciationItem[];
+  stories?: Story[];
+  listening?: Listening[];
 };
 
 function readCache(): CachedContent | null {
@@ -50,6 +54,14 @@ export function getEffectivePronunciation(): PronunciationItem[] {
   return readCache()?.pronunciation ?? bundledPronunciation;
 }
 
+export function getEffectiveStories(): Story[] {
+  return readCache()?.stories ?? bundledStories;
+}
+
+export function getEffectiveListening(): Listening[] {
+  return readCache()?.listening ?? bundledListening;
+}
+
 export function contentSource(): "remote" | "bundled" {
   return readCache() ? "remote" : "bundled";
 }
@@ -73,20 +85,24 @@ export async function checkForContentUpdates(): Promise<void> {
     const cached = readCache();
     if (cached && cached.version === meta.version) return; // ya está al día
 
-    const [cardsRes, sentencesRes, grammarRes, pronRes] = await Promise.all([
+    const [cardsRes, sentencesRes, grammarRes, pronRes, storiesRes, listeningRes] = await Promise.all([
       fetch(`${REMOTE_BASE}/cards.json`, { signal: AbortSignal.timeout(6000), cache: "no-store" }),
       fetch(`${REMOTE_BASE}/sentences.json`, { signal: AbortSignal.timeout(6000), cache: "no-store" }),
       fetch(`${REMOTE_BASE}/grammar-notes.json`, { signal: AbortSignal.timeout(6000), cache: "no-store" }),
       fetch(`${REMOTE_BASE}/pronunciation.json`, { signal: AbortSignal.timeout(6000), cache: "no-store" }),
+      fetch(`${REMOTE_BASE}/stories.json`, { signal: AbortSignal.timeout(6000), cache: "no-store" }),
+      fetch(`${REMOTE_BASE}/listening.json`, { signal: AbortSignal.timeout(6000), cache: "no-store" }),
     ]);
-    if (!cardsRes.ok || !sentencesRes.ok || !grammarRes.ok || !pronRes.ok) return;
+    if (!cardsRes.ok || !sentencesRes.ok || !grammarRes.ok || !pronRes.ok || !storiesRes.ok || !listeningRes.ok) return;
 
-    const [cards, sentences, grammarNotes, pronunciation] = (await Promise.all([
+    const [cards, sentences, grammarNotes, pronunciation, stories, listening] = (await Promise.all([
       cardsRes.json(),
       sentencesRes.json(),
       grammarRes.json(),
       pronRes.json(),
-    ])) as [Card[], Sentence[], GrammarNote[], PronunciationItem[]];
+      storiesRes.json(),
+      listeningRes.json(),
+    ])) as [Card[], Sentence[], GrammarNote[], PronunciationItem[], Story[], Listening[]];
 
     // Validación mínima: si algo viene vacío o con forma rara, es más
     // seguro no pisar el contenido bundleado que confiar ciegamente.
@@ -94,9 +110,11 @@ export async function checkForContentUpdates(): Promise<void> {
     if (!Array.isArray(sentences) || sentences.length === 0) return;
     if (!Array.isArray(grammarNotes) || grammarNotes.length === 0) return;
     if (!Array.isArray(pronunciation) || pronunciation.length === 0) return;
+    if (!Array.isArray(stories) || stories.length === 0) return;
+    if (!Array.isArray(listening) || listening.length === 0) return;
     if (!cards.every((c) => typeof c.id === "string" && typeof c.fr === "string")) return;
 
-    const next: CachedContent = { version: meta.version, cards, sentences, grammarNotes, pronunciation };
+    const next: CachedContent = { version: meta.version, cards, sentences, grammarNotes, pronunciation, stories, listening };
     window.localStorage.setItem(CACHE_KEY, JSON.stringify(next));
   } catch {
     // sin internet, timeout, JSON inválido — la app sigue con lo local.

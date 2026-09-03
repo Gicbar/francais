@@ -122,6 +122,40 @@ export default function Home() {
         </Link>
       </div>
 
+      <div className="grid sm:grid-cols-2 gap-4">
+        <Link href="/historias" className="card card-hover group p-6 relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-clay to-clay/30" />
+          <div className="w-11 h-11 rounded-2xl bg-clay-soft flex items-center justify-center text-lg mb-4">
+            📚
+          </div>
+          <h2 className="font-serif text-xl mb-1.5 text-ink">Historias</h2>
+          <p className="text-sm text-ink-soft leading-relaxed">
+            Lecturas más largas y variadas — vida cotidiana, viajes, misterio,
+            trabajo — para ampliar vocabulario con contexto real.
+          </p>
+          <span className="inline-flex items-center gap-1 mt-4 text-sm text-clay font-medium">
+            historias de todos los niveles
+            <span className="transition-transform group-hover:translate-x-0.5">→</span>
+          </span>
+        </Link>
+
+        <Link href="/escuchar" className="card card-hover group p-6 relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sage to-dusk" />
+          <div className="w-11 h-11 rounded-2xl bg-sage-soft flex items-center justify-center text-lg mb-4">
+            🎧
+          </div>
+          <h2 className="font-serif text-xl mb-1.5 text-ink">Escuchar</h2>
+          <p className="text-sm text-ink-soft leading-relaxed">
+            Diálogos de comprensión oral: escucha primero, entiende después,
+            responde preguntas y revisa la transcripción al final.
+          </p>
+          <span className="inline-flex items-center gap-1 mt-4 text-sm text-sage-ink font-medium">
+            audios de todos los niveles
+            <span className="transition-transform group-hover:translate-x-0.5">→</span>
+          </span>
+        </Link>
+      </div>
+
       {stats && stats.struggling > 0 && (
         <Link
           href="/errores"

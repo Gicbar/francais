@@ -58,4 +58,12 @@ export const seedSentences: Sentence[] = [
   { id: "st48", fr: "C'est une personne honnête qui a tendance à trop travailler.", es: "Es una persona honesta que tiende a trabajar demasiado.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
   { id: "st49", fr: "Ils se sont disputés, mais ils se sont réconciliés le lendemain.", es: "Se pelearon, pero se reconciliaron al día siguiente.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
   { id: "st50", fr: "Il vaut mieux que tu ailles chez le médecin avant que ça empire.", es: "Es mejor que vayas al médico antes de que empeore.", theme: "essentiel", level: "B1", source: "Uso cotidiano" },
+
+  { id: "st51", fr: "Il fait quel temps à Paris aujourd'hui ? Il fait beau, il fait quinze degrés.", es: "¿Qué tiempo hace hoy en París? Hace buen tiempo, hace quince grados.", theme: "essentiel", level: "A1", source: "Cours 13" },
+  { id: "st52", fr: "Je viens du Maroc, mais j'habite en France depuis deux ans.", es: "Vengo de Marruecos, pero vivo en Francia desde hace dos años.", theme: "essentiel", level: "A1", source: "Cours 13" },
+  { id: "st53", fr: "Mon équipe vient de l'Inde, du Maroc et des États-Unis.", es: "Mi equipo viene de la India, de Marruecos y de Estados Unidos.", theme: "essentiel", level: "A1", source: "Cours 13" },
+
+  { id: "st54", fr: "Est-ce que vous êtes disponible jeudi après-midi pour un appel ?", es: "¿Está disponible el jueves en la tarde para una llamada?", theme: "essentiel", level: "A1", source: "Cours 14" },
+  { id: "st55", fr: "Désolé, je ne suis pas disponible lundi, mais mercredi je suis libre.", es: "Lo siento, no estoy disponible el lunes, pero el miércoles estoy libre.", theme: "essentiel", level: "A1", source: "Cours 14" },
+  { id: "st56", fr: "Parfait, disons seize heures, ça vous convient ?", es: "Perfecto, digamos las cuatro, ¿le viene bien?", theme: "essentiel", level: "A1", source: "Cours 14" },
 ];

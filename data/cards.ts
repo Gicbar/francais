@@ -221,6 +221,29 @@ const a1Cards: RawCard[] = [
   { id: "c11-13", fr: "le restaurant / le bar", es: "el restaurante / el bar", theme: "loisirs" },
   { id: "c11-14", fr: "aller au cinéma / aller à la piscine", es: "ir al cine / ir a la piscina", theme: "essentiel", example: "Je veux aller au théâtre, tu veux venir ?", exampleEs: "Quiero ir al teatro, ¿quieres venir?" },
   { id: "c11-15", fr: "le fuseau horaire", es: "la zona horaria", theme: "essentiel" },
+
+  // --- Cours 13 ARQUITECSOFT: météo, saisons, venir/habiter/aller + pays ---
+  { id: "c13-1", fr: "il fait quel temps ?", es: "¿qué tiempo hace?", theme: "essentiel" },
+  { id: "c13-2", fr: "il fait ... degrés", es: "hace ... grados", theme: "essentiel" },
+  { id: "c13-3", fr: "il y a du vent / il y a des éclairs", es: "hay viento / hay relámpagos", theme: "essentiel" },
+  { id: "c13-4", fr: "l'été / l'automne / l'hiver / le printemps", es: "el verano / el otoño / el invierno / la primavera", theme: "essentiel" },
+  { id: "c13-5", fr: "je viens / tu viens / il vient", es: "yo vengo / tú vienes / él viene (venir)", theme: "verbes" },
+  { id: "c13-6", fr: "nous venons / vous venez / ils viennent", es: "nosotros venimos / ustedes vienen / ellos vienen (venir)", theme: "verbes" },
+  { id: "c13-7", fr: "je viens du Maroc, j'habite au Maroc", es: "vengo de Marruecos, vivo en Marruecos (país masculino: du / au)", theme: "essentiel", example: "Je viens du Maroc. J'habite au Maroc.", exampleEs: "Vengo de Marruecos. Vivo en Marruecos." },
+  { id: "c13-8", fr: "je viens de France, j'habite en France", es: "vengo de Francia, vivo en Francia (país femenino: de / en)", theme: "essentiel", example: "Je viens de Turquie. J'habite en Turquie.", exampleEs: "Vengo de Turquía. Vivo en Turquía." },
+  { id: "c13-9", fr: "je viens des États-Unis, j'habite aux États-Unis", es: "vengo de Estados Unidos, vivo en Estados Unidos (país plural: des / aux)", theme: "essentiel" },
+  { id: "c13-10", fr: "je viens de Paris, j'habite à Paris", es: "vengo de París, vivo en París (ciudad: de / à)", theme: "essentiel" },
+
+  // --- Cours 14 ARQUITECSOFT: organiser une réunion, pouvoir, disponibilités ---
+  { id: "c14-1", fr: "je peux / tu peux / il peut", es: "yo puedo / tú puedes / él puede (pouvoir)", theme: "verbes" },
+  { id: "c14-2", fr: "nous pouvons / vous pouvez / ils peuvent", es: "nosotros podemos / ustedes pueden / ellos pueden (pouvoir)", theme: "verbes" },
+  { id: "c14-3", fr: "jeudi, vendredi, samedi, dimanche", es: "jueves, viernes, sábado, domingo", theme: "essentiel" },
+  { id: "c14-4", fr: "vous êtes disponible quand ?", es: "¿cuándo está disponible?", theme: "essentiel" },
+  { id: "c14-5", fr: "je suis libre / je ne suis pas disponible", es: "estoy libre / no estoy disponible", theme: "essentiel" },
+  { id: "c14-6", fr: "ça vous convient ?", es: "¿le viene bien?", theme: "essentiel", example: "Disons quinze heures, ça vous convient ?", exampleEs: "Digamos las tres, ¿le viene bien?" },
+  { id: "c14-7", fr: "un créneau", es: "un espacio de tiempo disponible", theme: "essentiel" },
+  { id: "c14-8", fr: "désolé, je ne suis pas disponible", es: "lo siento, no estoy disponible (rechazar con cortesía)", theme: "phrases" },
+  { id: "c14-9", fr: "une visioconférence", es: "una videollamada", theme: "essentiel" },
 ];
 
 // --- Nivel A2: vocabulario para hablar de pasado, futuro, opiniones y

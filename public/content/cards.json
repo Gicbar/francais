@@ -1295,6 +1295,145 @@
     "level": "A1"
   },
   {
+    "id": "c13-1",
+    "fr": "il fait quel temps ?",
+    "es": "¿qué tiempo hace?",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c13-2",
+    "fr": "il fait ... degrés",
+    "es": "hace ... grados",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c13-3",
+    "fr": "il y a du vent / il y a des éclairs",
+    "es": "hay viento / hay relámpagos",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c13-4",
+    "fr": "l'été / l'automne / l'hiver / le printemps",
+    "es": "el verano / el otoño / el invierno / la primavera",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c13-5",
+    "fr": "je viens / tu viens / il vient",
+    "es": "yo vengo / tú vienes / él viene (venir)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "c13-6",
+    "fr": "nous venons / vous venez / ils viennent",
+    "es": "nosotros venimos / ustedes vienen / ellos vienen (venir)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "c13-7",
+    "fr": "je viens du Maroc, j'habite au Maroc",
+    "es": "vengo de Marruecos, vivo en Marruecos (país masculino: du / au)",
+    "theme": "essentiel",
+    "example": "Je viens du Maroc. J'habite au Maroc.",
+    "exampleEs": "Vengo de Marruecos. Vivo en Marruecos.",
+    "level": "A1"
+  },
+  {
+    "id": "c13-8",
+    "fr": "je viens de France, j'habite en France",
+    "es": "vengo de Francia, vivo en Francia (país femenino: de / en)",
+    "theme": "essentiel",
+    "example": "Je viens de Turquie. J'habite en Turquie.",
+    "exampleEs": "Vengo de Turquía. Vivo en Turquía.",
+    "level": "A1"
+  },
+  {
+    "id": "c13-9",
+    "fr": "je viens des États-Unis, j'habite aux États-Unis",
+    "es": "vengo de Estados Unidos, vivo en Estados Unidos (país plural: des / aux)",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c13-10",
+    "fr": "je viens de Paris, j'habite à Paris",
+    "es": "vengo de París, vivo en París (ciudad: de / à)",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c14-1",
+    "fr": "je peux / tu peux / il peut",
+    "es": "yo puedo / tú puedes / él puede (pouvoir)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "c14-2",
+    "fr": "nous pouvons / vous pouvez / ils peuvent",
+    "es": "nosotros podemos / ustedes pueden / ellos pueden (pouvoir)",
+    "theme": "verbes",
+    "level": "A1"
+  },
+  {
+    "id": "c14-3",
+    "fr": "jeudi, vendredi, samedi, dimanche",
+    "es": "jueves, viernes, sábado, domingo",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c14-4",
+    "fr": "vous êtes disponible quand ?",
+    "es": "¿cuándo está disponible?",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c14-5",
+    "fr": "je suis libre / je ne suis pas disponible",
+    "es": "estoy libre / no estoy disponible",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c14-6",
+    "fr": "ça vous convient ?",
+    "es": "¿le viene bien?",
+    "theme": "essentiel",
+    "example": "Disons quinze heures, ça vous convient ?",
+    "exampleEs": "Digamos las tres, ¿le viene bien?",
+    "level": "A1"
+  },
+  {
+    "id": "c14-7",
+    "fr": "un créneau",
+    "es": "un espacio de tiempo disponible",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
+    "id": "c14-8",
+    "fr": "désolé, je ne suis pas disponible",
+    "es": "lo siento, no estoy disponible (rechazar con cortesía)",
+    "theme": "phrases",
+    "level": "A1"
+  },
+  {
+    "id": "c14-9",
+    "fr": "une visioconférence",
+    "es": "una videollamada",
+    "theme": "essentiel",
+    "level": "A1"
+  },
+  {
     "id": "a2-1",
     "fr": "hier soir / la semaine dernière",
     "es": "anoche / la semana pasada",

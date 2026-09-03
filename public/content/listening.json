@@ -1,0 +1,677 @@
+[
+  {
+    "id": "ecoute-a1-1",
+    "title": "Premier jour au bureau",
+    "theme": "bureau",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Bonjour ! Je m'appelle Léa, c'est mon premier jour ici.",
+        "es": "Hola! Me llamo Léa, es mi primer día aquí."
+      },
+      {
+        "speaker": "B",
+        "fr": "Bonjour Léa, bienvenue ! Moi, c'est Thomas.",
+        "es": "Hola Léa, ¡bienvenida! Yo soy Thomas."
+      },
+      {
+        "speaker": "A",
+        "fr": "Enchantée, Thomas. Où est mon bureau, s'il vous plaît ?",
+        "es": "Mucho gusto, Thomas. ¿Dónde está mi escritorio, por favor?"
+      },
+      {
+        "speaker": "B",
+        "fr": "C'est juste là, à côté de la fenêtre.",
+        "es": "Está justo ahí, al lado de la ventana."
+      },
+      {
+        "speaker": "A",
+        "fr": "Merci beaucoup. Et l'ordinateur, il est déjà prêt ?",
+        "es": "Muchas gracias. ¿Y el computador ya está listo?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Oui, le mot de passe est sur le bureau.",
+        "es": "Sí, la contraseña está en el escritorio."
+      },
+      {
+        "speaker": "A",
+        "fr": "Parfait, merci pour votre aide !",
+        "es": "¡Perfecto, gracias por su ayuda!"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Comment s'appelle la nouvelle employée ?",
+        "options": [
+          "Léa",
+          "Thomas",
+          "Ana"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "q": "Où est le bureau de Léa ?",
+        "options": [
+          "Près de la porte",
+          "À côté de la fenêtre",
+          "Dans une autre salle"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Où est le mot de passe de l'ordinateur ?",
+        "options": [
+          "Sur le bureau",
+          "Dans un tiroir",
+          "Sur le téléphone"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "level": "A1"
+  },
+  {
+    "id": "ecoute-a1-2",
+    "title": "Réserver une table",
+    "theme": "restaurant",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Bonjour, je voudrais réserver une table pour deux personnes.",
+        "es": "Hola, quisiera reservar una mesa para dos personas."
+      },
+      {
+        "speaker": "B",
+        "fr": "Bien sûr, pour quel jour et à quelle heure ?",
+        "es": "Claro, ¿para qué día y a qué hora?"
+      },
+      {
+        "speaker": "A",
+        "fr": "Pour vendredi soir, à vingt heures, s'il vous plaît.",
+        "es": "Para el viernes en la noche, a las ocho, por favor."
+      },
+      {
+        "speaker": "B",
+        "fr": "D'accord. C'est à quel nom ?",
+        "es": "De acuerdo. ¿A nombre de quién?"
+      },
+      {
+        "speaker": "A",
+        "fr": "Au nom de Camilo, s'il vous plaît.",
+        "es": "A nombre de Camilo, por favor."
+      },
+      {
+        "speaker": "B",
+        "fr": "Parfait, c'est noté. À vendredi !",
+        "es": "Perfecto, quedó anotado. ¡Hasta el viernes!"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Pour combien de personnes est la réservation ?",
+        "options": [
+          "Une",
+          "Deux",
+          "Quatre"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Quel jour est la réservation ?",
+        "options": [
+          "Jeudi",
+          "Samedi",
+          "Vendredi"
+        ],
+        "correctIndex": 2
+      },
+      {
+        "q": "À quelle heure est la réservation ?",
+        "options": [
+          "Dix-neuf heures",
+          "Vingt heures",
+          "Vingt et une heures"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "level": "A1"
+  },
+  {
+    "id": "ecoute-a1-3",
+    "title": "Demander son chemin",
+    "theme": "voyage",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Excusez-moi, je cherche la gare. C'est loin d'ici ?",
+        "es": "Disculpe, busco la estación. ¿Está lejos de aquí?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Non, ce n'est pas loin. C'est tout droit, puis à gauche.",
+        "es": "No, no está lejos. Es derecho, luego a la izquierda."
+      },
+      {
+        "speaker": "A",
+        "fr": "D'accord, tout droit et à gauche. Merci !",
+        "es": "De acuerdo, derecho y a la izquierda. ¡Gracias!"
+      },
+      {
+        "speaker": "B",
+        "fr": "Il y a aussi un bus, le numéro douze, juste ici.",
+        "es": "También hay un bus, el número doce, justo aquí."
+      },
+      {
+        "speaker": "A",
+        "fr": "Ah super, c'est plus rapide alors ?",
+        "es": "Ah genial, ¿entonces es más rápido?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Oui, en bus, c'est cinq minutes. À pied, c'est vingt minutes.",
+        "es": "Sí, en bus son cinco minutos. A pie, son veinte minutos."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Que cherche la personne A ?",
+        "options": [
+          "Un restaurant",
+          "La gare",
+          "Un hôtel"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Combien de temps prend le trajet en bus ?",
+        "options": [
+          "Cinq minutes",
+          "Vingt minutes",
+          "Une heure"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "q": "Quel numéro de bus faut-il prendre ?",
+        "options": [
+          "Le douze",
+          "Le deux",
+          "Le vingt"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "level": "A1"
+  },
+  {
+    "id": "ecoute-a2-1",
+    "title": "Un appel client",
+    "theme": "bureau",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Bonjour, je vous appelle au sujet du projet que nous avons commencé le mois dernier.",
+        "es": "Hola, le llamo respecto al proyecto que comenzamos el mes pasado."
+      },
+      {
+        "speaker": "B",
+        "fr": "Bonjour, oui, je me souviens. Il y a un problème ?",
+        "es": "Hola, sí, recuerdo. ¿Hay algún problema?"
+      },
+      {
+        "speaker": "A",
+        "fr": "Pas vraiment, mais nous allons avoir deux jours de retard.",
+        "es": "No realmente, pero vamos a tener dos días de retraso."
+      },
+      {
+        "speaker": "B",
+        "fr": "D'accord, ce n'est pas grave. Merci de m'avoir prévenu à l'avance.",
+        "es": "De acuerdo, no es grave. Gracias por avisarme con anticipación."
+      },
+      {
+        "speaker": "A",
+        "fr": "Nous vous enverrons la version finale vendredi matin.",
+        "es": "Le enviaremos la versión final el viernes por la mañana."
+      },
+      {
+        "speaker": "B",
+        "fr": "Parfait, ça me convient très bien.",
+        "es": "Perfecto, me viene muy bien."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Pourquoi la personne A appelle-t-elle ?",
+        "options": [
+          "Pour annuler le projet",
+          "Pour annoncer un retard",
+          "Pour demander plus d'argent"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "De combien de jours sera le retard ?",
+        "options": [
+          "Un jour",
+          "Deux jours",
+          "Une semaine"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Quand recevra-t-on la version finale ?",
+        "options": [
+          "Jeudi soir",
+          "Vendredi matin",
+          "Lundi prochain"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "level": "A2"
+  },
+  {
+    "id": "ecoute-a2-2",
+    "title": "Organiser le week-end",
+    "theme": "quotidien",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Qu'est-ce que tu vas faire ce week-end ?",
+        "es": "¿Qué vas a hacer este fin de semana?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Je pense aller à la piscine samedi matin, et toi ?",
+        "es": "Pienso ir a la piscina el sábado en la mañana, ¿y tú?"
+      },
+      {
+        "speaker": "A",
+        "fr": "Moi, je vais visiter mes parents à Medellín.",
+        "es": "Yo voy a visitar a mis padres en Medellín."
+      },
+      {
+        "speaker": "B",
+        "fr": "Ah super ! Tu pars en avion ou en bus ?",
+        "es": "¡Ah genial! ¿Te vas en avión o en bus?"
+      },
+      {
+        "speaker": "A",
+        "fr": "En bus, c'est moins cher et j'aime regarder le paysage.",
+        "es": "En bus, es más barato y me gusta ver el paisaje."
+      },
+      {
+        "speaker": "B",
+        "fr": "Bon voyage alors, et bon week-end !",
+        "es": "¡Buen viaje entonces, y buen fin de semana!"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Que va faire B samedi matin ?",
+        "options": [
+          "Aller à la piscine",
+          "Aller au cinéma",
+          "Travailler"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "q": "Où va A ce week-end ?",
+        "options": [
+          "À Bogotá",
+          "À Medellín",
+          "À Paris"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Comment A voyage-t-il ?",
+        "options": [
+          "En avion",
+          "En voiture",
+          "En bus"
+        ],
+        "correctIndex": 2
+      }
+    ],
+    "level": "A2"
+  },
+  {
+    "id": "ecoute-a2-3",
+    "title": "Chez le médecin",
+    "theme": "sante",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Bonjour docteur, j'ai mal à la tête depuis deux jours.",
+        "es": "Hola doctor, me duele la cabeza desde hace dos días."
+      },
+      {
+        "speaker": "B",
+        "fr": "Bonjour. Avez-vous aussi de la fièvre ?",
+        "es": "Hola. ¿Tiene también fiebre?"
+      },
+      {
+        "speaker": "A",
+        "fr": "Un peu, hier soir j'avais trente-huit degrés.",
+        "es": "Un poco, anoche tenía treinta y ocho grados."
+      },
+      {
+        "speaker": "B",
+        "fr": "Je vois. Vous devez vous reposer et boire beaucoup d'eau.",
+        "es": "Ya veo. Debe descansar y tomar mucha agua."
+      },
+      {
+        "speaker": "A",
+        "fr": "Est-ce que je dois prendre des médicaments ?",
+        "es": "¿Debo tomar medicamentos?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Oui, prenez ce médicament deux fois par jour, après les repas.",
+        "es": "Sí, tome este medicamento dos veces al día, después de las comidas."
+      }
+    ],
+    "questions": [
+      {
+        "q": "De quoi souffre le patient ?",
+        "options": [
+          "Mal au ventre",
+          "Mal à la tête",
+          "Mal au dos"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Depuis combien de temps ?",
+        "options": [
+          "Un jour",
+          "Deux jours",
+          "Une semaine"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Combien de fois par jour doit-il prendre le médicament ?",
+        "options": [
+          "Une fois",
+          "Deux fois",
+          "Trois fois"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "level": "A2"
+  },
+  {
+    "id": "ecoute-b1-1",
+    "title": "Négocier un délai",
+    "theme": "bureau",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Je voulais discuter du délai pour le rapport final.",
+        "es": "Quería hablar del plazo para el informe final."
+      },
+      {
+        "speaker": "B",
+        "fr": "D'accord, je vous écoute. Il y a un souci ?",
+        "es": "De acuerdo, le escucho. ¿Hay algún inconveniente?"
+      },
+      {
+        "speaker": "A",
+        "fr": "En fait, il faudrait que nous ayons trois jours de plus pour bien vérifier les chiffres.",
+        "es": "De hecho, necesitaríamos tres días más para verificar bien las cifras."
+      },
+      {
+        "speaker": "B",
+        "fr": "Je comprends, mais le client attend le rapport lundi sans faute.",
+        "es": "Entiendo, pero el cliente espera el informe el lunes sin falta."
+      },
+      {
+        "speaker": "A",
+        "fr": "Et si nous livrions une première version lundi, puis la version corrigée mercredi ?",
+        "es": "¿Y si entregamos una primera versión el lunes, y luego la versión corregida el miércoles?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Ça pourrait fonctionner. Je vais en parler au client aujourd'hui même.",
+        "es": "Eso podría funcionar. Voy a hablarlo con el cliente hoy mismo."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Pourquoi A demande-t-il plus de temps ?",
+        "options": [
+          "Pour changer de projet",
+          "Pour vérifier les chiffres",
+          "Pour partir en vacances"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Quelle solution est proposée ?",
+        "options": [
+          "Annuler le rapport",
+          "Livrer en deux temps",
+          "Demander plus d'argent"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Que va faire B ensuite ?",
+        "options": [
+          "Parler au client",
+          "Démissionner",
+          "Ignorer la demande"
+        ],
+        "correctIndex": 0
+      }
+    ],
+    "level": "B1"
+  },
+  {
+    "id": "ecoute-b1-2",
+    "title": "Débat sur les vacances",
+    "theme": "quotidien",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Si tu pouvais choisir, tu préférerais des vacances à la mer ou à la montagne ?",
+        "es": "Si pudieras elegir, ¿preferirías vacaciones en la playa o en la montaña?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Je crois que je choisirais la montagne, j'adore la tranquillité et l'air frais.",
+        "es": "Creo que elegiría la montaña, me encanta la tranquilidad y el aire fresco."
+      },
+      {
+        "speaker": "A",
+        "fr": "Moi, j'ai besoin de soleil et de mer pour me détendre vraiment.",
+        "es": "A mí me hace falta sol y mar para relajarme de verdad."
+      },
+      {
+        "speaker": "B",
+        "fr": "On pourrait peut-être faire un compromis, non ?",
+        "es": "¿Quizás podríamos llegar a un acuerdo, no?"
+      },
+      {
+        "speaker": "A",
+        "fr": "Bonne idée, une semaine à la montagne et une semaine à la mer !",
+        "es": "¡Buena idea, una semana en la montaña y una semana en el mar!"
+      },
+      {
+        "speaker": "B",
+        "fr": "Ça me va très bien, il faut juste que nous réservions à temps.",
+        "es": "Me parece muy bien, solo hace falta que reservemos a tiempo."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Que préfère B ?",
+        "options": [
+          "La mer",
+          "La montagne",
+          "La ville"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Qu'est-ce que A recherche dans ses vacances ?",
+        "options": [
+          "Le calme",
+          "Le soleil et la mer",
+          "La neige"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Quelle solution trouvent-ils ?",
+        "options": [
+          "Aller seulement à la mer",
+          "Ne pas partir",
+          "Faire les deux"
+        ],
+        "correctIndex": 2
+      }
+    ],
+    "level": "B1"
+  },
+  {
+    "id": "ecoute-b2-1",
+    "title": "Interview : le futur du travail",
+    "theme": "societe",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Selon vous, à quoi ressemblera le travail dans dix ans ?",
+        "es": "Según usted, ¿a qué se parecerá el trabajo dentro de diez años?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Je pense que l'intelligence artificielle transformera profondément la plupart des métiers.",
+        "es": "Pienso que la inteligencia artificial transformará profundamente la mayoría de los oficios."
+      },
+      {
+        "speaker": "A",
+        "fr": "Cela ne vous inquiète-t-il pas, pour l'emploi des jeunes générations ?",
+        "es": "¿No le preocupa eso, para el empleo de las generaciones jóvenes?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Si, un peu, mais je crois surtout que de nouveaux métiers vont apparaître.",
+        "es": "Sí, un poco, pero creo sobre todo que van a aparecer nuevos oficios."
+      },
+      {
+        "speaker": "A",
+        "fr": "Quel conseil donneriez-vous à quelqu'un qui débute sa carrière aujourd'hui ?",
+        "es": "¿Qué consejo le daría a alguien que empieza su carrera hoy?"
+      },
+      {
+        "speaker": "B",
+        "fr": "Je lui dirais qu'il est essentiel de continuer à apprendre, quel que soit le domaine.",
+        "es": "Le diría que es esencial seguir aprendiendo, sea cual sea el campo."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Quel sujet transforme le travail selon B ?",
+        "options": [
+          "Le climat",
+          "L'intelligence artificielle",
+          "La démographie"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "B pense-t-il que de nouveaux métiers vont apparaître ?",
+        "options": [
+          "Oui",
+          "Non",
+          "Il ne sait pas"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "q": "Quel conseil B donne-t-il ?",
+        "options": [
+          "Changer souvent d'entreprise",
+          "Continuer à apprendre",
+          "Travailler moins"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "level": "B2"
+  },
+  {
+    "id": "ecoute-b2-2",
+    "title": "Une dispute résolue",
+    "theme": "quotidien",
+    "lines": [
+      {
+        "speaker": "A",
+        "fr": "Écoute, je crois qu'on doit parler de ce qui s'est passé hier.",
+        "es": "Escucha, creo que debemos hablar de lo que pasó ayer."
+      },
+      {
+        "speaker": "B",
+        "fr": "Oui, tu as raison, je n'aurais pas dû te parler sur ce ton.",
+        "es": "Sí, tienes razón, no debí haberte hablado en ese tono."
+      },
+      {
+        "speaker": "A",
+        "fr": "Ce qui m'a le plus dérangé, c'est que tu ne m'aies pas laissé finir mes explications.",
+        "es": "Lo que más me molestó fue que no me dejaras terminar mis explicaciones."
+      },
+      {
+        "speaker": "B",
+        "fr": "Tu as raison, j'étais stressé, mais ça n'excuse pas mon comportement.",
+        "es": "Tienes razón, estaba estresado, pero eso no excusa mi comportamiento."
+      },
+      {
+        "speaker": "A",
+        "fr": "Je pense qu'il vaudrait mieux qu'on se donne plus de temps avant de réagir, la prochaine fois.",
+        "es": "Creo que sería mejor que nos diéramos más tiempo antes de reaccionar, la próxima vez."
+      },
+      {
+        "speaker": "B",
+        "fr": "D'accord, on essaiera de faire ça. Merci de m'en avoir parlé calmement.",
+        "es": "De acuerdo, intentaremos hacer eso. Gracias por hablarme de esto con calma."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Qu'est-ce qui a dérangé A ?",
+        "options": [
+          "Ne pas être écouté",
+          "Un retard",
+          "Un manque d'argent"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "q": "Pourquoi B s'est-il comporté ainsi selon lui ?",
+        "options": [
+          "Il était fatigué",
+          "Il était stressé",
+          "Il était en colère contre un autre"
+        ],
+        "correctIndex": 1
+      },
+      {
+        "q": "Que décident-ils pour la prochaine fois ?",
+        "options": [
+          "Ne plus se parler",
+          "Se donner plus de temps avant de réagir",
+          "Éviter le sujet"
+        ],
+        "correctIndex": 1
+      }
+    ],
+    "level": "B2"
+  }
+]

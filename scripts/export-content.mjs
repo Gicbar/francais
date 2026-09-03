@@ -16,7 +16,14 @@ const tmpDir = path.join(root, ".export-content-tmp");
 if (existsSync(tmpDir)) rmSync(tmpDir, { recursive: true, force: true });
 mkdirSync(tmpDir, { recursive: true });
 
-const files = ["data/cards.ts", "data/sentences.ts", "data/grammar-notes.ts", "data/pronunciation.ts"];
+const files = [
+  "data/cards.ts",
+  "data/sentences.ts",
+  "data/grammar-notes.ts",
+  "data/pronunciation.ts",
+  "data/stories.ts",
+  "data/listening.ts",
+];
 
 // tsc en modo archivo suelto no lee tsconfig.json, así que hace falta un
 // tsconfig temporal para que resuelva el alias "@/*" (usado en imports
@@ -50,6 +57,8 @@ const { seedCards } = await import(toURL("data", "cards.js"));
 const { seedSentences } = await import(toURL("data", "sentences.js"));
 const { grammarNotes } = await import(toURL("data", "grammar-notes.js"));
 const { pronunciationItems } = await import(toURL("data", "pronunciation.js"));
+const { seedStories } = await import(toURL("data", "stories.js"));
+const { seedListening } = await import(toURL("data", "listening.js"));
 
 const outDir = path.join(root, "public", "content");
 mkdirSync(outDir, { recursive: true });
@@ -59,6 +68,8 @@ const files_out = {
   "sentences.json": seedSentences,
   "grammar-notes.json": grammarNotes,
   "pronunciation.json": pronunciationItems,
+  "stories.json": seedStories,
+  "listening.json": seedListening,
 };
 
 const hash = createHash("sha256");
@@ -78,5 +89,5 @@ rmSync(tmpDir, { recursive: true, force: true });
 
 console.log(`Contenido exportado a public/content/ — version ${version}`);
 console.log(
-  `  ${seedCards.length} tarjetas · ${seedSentences.length} frases · ${grammarNotes.length} reglas · ${pronunciationItems.length} pronunciación`
+  `  ${seedCards.length} tarjetas · ${seedSentences.length} frases · ${grammarNotes.length} reglas · ${pronunciationItems.length} pronunciación · ${seedStories.length} historias · ${seedListening.length} audios`
 );
