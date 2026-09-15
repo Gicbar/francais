@@ -12,6 +12,7 @@ const links = [
   { href: "/historias", label: "Historias" },
   { href: "/escuchar", label: "Escuchar" },
   { href: "/gramatica", label: "Gramática" },
+  { href: "/articulos", label: "Artículos" },
   { href: "/pronunciacion", label: "Pronunciar" },
   { href: "/errores", label: "Errores" },
   { href: "/niveles", label: "Niveles" },
