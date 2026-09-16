@@ -101,16 +101,16 @@ export default function ArticulosPage() {
 
       <Section id="resumen" title="1. Resumen general">
         <Table
-          head={["Tipo", "Palabras", "Ejemplo", "Significado"]}
+          head={["Tipo", "Palabras", "Para qué sirve", "Ejemplo"]}
           rows={[
-            ["Definidos", "le, la, l', les", "le café", "el café (cosa precisa/conocida)"],
-            ["Indefinidos", "un, une, des", "un café", "un café (se cuenta, no es preciso)"],
-            ["Partitivos", "du, de la, de l', des", "du café", "algo de café (cantidad indefinida)"],
-            ["Demostrativos", "ce, cet, cette, ces", "ce café", "este café (se señala)"],
-            ["Posesivos", "mon/ma/mes, ton/ta/tes, son/sa/ses...", "mon café", "mi café"],
-            ["Interrogativos", "quel, quelle, quels, quelles", "quel café ?", "¿qué café? / ¿cuál?"],
-            ["Numerales", "un, deux, trois...", "deux cafés", "dos cafés"],
-            ["Indefinidos (adj.)", "quelques, plusieurs, chaque...", "quelques cafés", "algunos cafés"],
+            ["Definidos", "le, la, l', les", "algo preciso/conocido, o una categoría en general", "le professeur, les enfants"],
+            ["Indefinidos", "un, une, des", "algo no específico, que se puede contar", "un livre, des amis"],
+            ["Partitivos", "du, de la, de l', des", "una cantidad indefinida de algo que no se cuenta", "du temps, de la patience"],
+            ["Demostrativos", "ce, cet, cette, ces", "señalar algo preciso, como con el dedo", "ce livre, cette maison"],
+            ["Posesivos", "mon/ma/mes, ton/ta/tes, son/sa/ses...", "indicar a quién pertenece algo", "mon frère, ses clés"],
+            ["Interrogativos", "quel, quelle, quels, quelles", "preguntar por algo concreto entre varias opciones", "quelle heure ?, quels jours ?"],
+            ["Numerales", "un, deux, trois...", "contar con precisión", "trois enfants, dix minutes"],
+            ["Indefinidos (adj.)", "quelques, plusieurs, chaque", "una cantidad aproximada, no exacta", "quelques amis, chaque matin"],
           ]}
         />
         <div className="mt-4">
