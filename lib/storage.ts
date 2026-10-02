@@ -14,6 +14,8 @@ const KEYS = {
   focus: "fr.focusQueue.v1",
   grammar: "fr.grammarProgress.v1",
   migrations: "fr.migrations.v1",
+  spelling: "fr.spelling.v1",
+  spellStrict: "fr.spellingStrict.v1",
 };
 
 function read<T>(key: string, fallback: T): T {
@@ -177,6 +179,35 @@ export function saveGrammarResult(ruleId: string, correct: number, total: number
   const prevDone = all[ruleId]?.done ?? false;
   all[ruleId] = { correct, total, done: prevDone || correct === total };
   write(KEYS.grammar, all);
+}
+
+// --- Práctica de escritura (módulo /escribir): estadística por ejercicio ---
+export type SpellStat = { ok: number; fail: number; accent: number; streak: number; last: string };
+
+export function getSpelling(): Record<string, SpellStat> {
+  return read<Record<string, SpellStat>>(KEYS.spelling, {});
+}
+
+export function recordSpelling(id: string, correct: boolean, accentOnly: boolean) {
+  const all = getSpelling();
+  const prev = all[id] ?? { ok: 0, fail: 0, accent: 0, streak: 0, last: "" };
+  all[id] = {
+    ok: prev.ok + (correct ? 1 : 0),
+    fail: prev.fail + (correct ? 0 : 1),
+    accent: prev.accent + (accentOnly ? 1 : 0),
+    streak: correct ? prev.streak + 1 : 0,
+    last: todayISO(),
+  };
+  write(KEYS.spelling, all);
+}
+
+// Estricto con los acentos (por defecto): una palabra sin sus acentos cuenta como fallo.
+export function getSpellStrict(): boolean {
+  return read<boolean>(KEYS.spellStrict, true);
+}
+
+export function setSpellStrict(v: boolean) {
+  write(KEYS.spellStrict, v);
 }
 
 export function popFocusQueue(): string[] {

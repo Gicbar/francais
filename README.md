@@ -80,6 +80,20 @@ selector 5/15/30 min), y texto clicable para traducir al estilo LingQ.
   para guardarla como flashcard nueva (tema `perso`) — el usuario puede
   corregir la traducción sugerida antes de guardar. También se puede anotar
   una frase completa a mano.
+- **`/escribir` (Escribir)** — práctica de ORTOGRAFÍA (agregado 2026-10-02).
+  Sesiones de 10 ejercicios en 4 modos: escribir palabras (es→fr), dictado de
+  palabras, dictado de frases (TTS) y conectores (completar el hueco, de
+  `data/connectors.ts`, sacado de Cours 19/15/13 + el error et/est). La
+  corrección (`lib/spelling.ts`) ignora mayúsculas y puntuación pero NO
+  acentos: distingue "perfecto" / "casi, solo acentos" / "mal" y muestra el
+  diff palabra por palabra y letra por letra. Barra de acentos (à â ç é è ê
+  ë î ï ô œ ù û ü « ») para teclado en español, botón de pista, y al fallar
+  hay que reescribir la forma correcta una vez (copia). Estadística por
+  ejercicio en `fr.spelling.v1` (`lib/storage.ts`): lo fallado vuelve más
+  seguido, 3 aciertos seguidos = dominado (`lib/writing.ts pickSession`).
+  Filtros por nivel, "solo mis fallos" y "acentos estrictos" (on por
+  defecto). Los conectores solo están en el bundle (no en el contenido
+  remoto de `public/content`).
 - **`/gramatica` (Gramática)** — ciclo enseñar → practicar → corregir por
   regla: ejemplo incorrecto/correcto + el porqué, luego 2-3 ejercicios de
   completar con corrección inline (sin IA, checking client-side como los

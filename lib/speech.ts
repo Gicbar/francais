@@ -13,12 +13,12 @@ function pickFrenchVoice(): SpeechSynthesisVoice | null {
   );
 }
 
-export function speakFrench(text: string, opts: { userInitiated?: boolean } = {}) {
+export function speakFrench(text: string, opts: { userInitiated?: boolean; rate?: number } = {}) {
   if (typeof window === "undefined" || !window.speechSynthesis) return;
   window.speechSynthesis.cancel();
   const utter = new SpeechSynthesisUtterance(text);
   utter.lang = "fr-FR";
-  utter.rate = 0.92;
+  utter.rate = opts.rate ?? 0.92;
   const voice = cachedVoice ?? pickFrenchVoice();
   if (voice) {
     utter.voice = voice;

@@ -8,6 +8,7 @@ import { checkForContentUpdates } from "@/lib/content";
 const links = [
   { href: "/", label: "Hoy" },
   { href: "/review", label: "Repasar" },
+  { href: "/escribir", label: "Escribir" },
   { href: "/leer", label: "Leer" },
   { href: "/historias", label: "Historias" },
   { href: "/escuchar", label: "Escuchar" },

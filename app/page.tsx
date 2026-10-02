@@ -156,6 +156,24 @@ export default function Home() {
         </Link>
       </div>
 
+      <Link href="/escribir" className="card card-hover group p-6 relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-clay to-sage" />
+        <div className="flex items-start gap-4">
+          <div className="w-11 h-11 rounded-2xl bg-clay-soft flex items-center justify-center text-lg shrink-0">✍️</div>
+          <div>
+            <h2 className="font-serif text-xl mb-1.5 text-ink">Escribir</h2>
+            <p className="text-sm text-ink-soft leading-relaxed">
+              Ortografía, acentos y conectores: escribe palabras, dictados y
+              completa frases. Te muestro letra por letra dónde fallaste.
+            </p>
+            <span className="inline-flex items-center gap-1 mt-3 text-sm text-clay font-medium">
+              practicar la escritura
+              <span className="transition-transform group-hover:translate-x-0.5">→</span>
+            </span>
+          </div>
+        </div>
+      </Link>
+
       {stats && stats.struggling > 0 && (
         <Link
           href="/errores"
