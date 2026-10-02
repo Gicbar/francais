@@ -28,7 +28,7 @@ export default function Nav() {
 
   return (
     <header className="border-b border-border bg-bg-soft/80 backdrop-blur sticky top-0 z-10">
-      <div className="max-w-2xl lg:max-w-3xl mx-auto px-3 sm:px-6 py-3 sm:py-3.5 flex items-center gap-2.5 sm:gap-3.5">
+      <div className="max-w-2xl lg:max-w-3xl mx-auto px-3 sm:px-6 py-3 sm:py-3.5 flex items-start gap-2.5 sm:gap-3.5">
         <Link href="/" className="shrink-0 flex items-center gap-2" aria-label="Petit à petit — inicio">
           <span className="w-7 h-7 rounded-full bg-gradient-to-br from-sage to-dusk flex items-center justify-center text-[13px] shadow-soft">
             🌿
@@ -38,7 +38,7 @@ export default function Nav() {
             <span className="tricolor mt-1"><span /><span /><span /></span>
           </span>
         </Link>
-        <nav className="flex gap-0.5 sm:gap-1 overflow-x-auto scrollbar-none pr-1 -mr-1">
+        <nav className="flex flex-wrap gap-0.5 sm:gap-1 min-w-0">
           {links.map((l) => {
             const active = pathname === l.href;
             return (
