@@ -88,7 +88,7 @@ export default function LeerPage() {
         <span className="text-xs uppercase tracking-wide text-ink-faint">
           Input comprensible · {readCount} leídas hoy
         </span>
-        <span className="text-[11px] px-2.5 py-1 rounded-full bg-dusk-soft text-dusk">
+        <span className="text-xs px-2.5 py-1 rounded-full bg-dusk-soft text-dusk">
           {sentence.source}
         </span>
       </div>
@@ -108,7 +108,7 @@ export default function LeerPage() {
             ))}
           </h1>
         </div>
-        <p className="text-[11px] text-ink-faint -mt-4">toca una palabra si no la entendiste</p>
+        <p className="text-xs text-ink-faint -mt-4">toca una palabra si no la entendiste</p>
         <button
           onClick={() => speakFrench(sentence.fr, { userInitiated: true })}
           aria-label="Escuchar"
@@ -153,7 +153,7 @@ export default function LeerPage() {
               className="rounded-lg border border-border bg-surface px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sage/40"
             />
             {meaning && !meaningLoading && (
-              <p className="text-[11px] text-ink-faint -mt-1">sugerido automáticamente — corrígelo si hace falta</p>
+              <p className="text-xs text-ink-faint -mt-1">sugerido automáticamente — corrígelo si hace falta</p>
             )}
             <div className="flex gap-2 mt-1">
               <button onClick={saveWord} className="flex-1 rounded-full bg-sage text-bg text-xs py-2 hover:opacity-90 shadow-soft">

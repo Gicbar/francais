@@ -128,7 +128,7 @@ export default function EscucharPage() {
         <span className="text-xs uppercase tracking-wide text-ink-faint">
           Escuchar · {doneCount} completados hoy
         </span>
-        <span className="text-[11px] px-2.5 py-1 rounded-full bg-dusk-soft text-dusk">
+        <span className="text-xs px-2.5 py-1 rounded-full bg-dusk-soft text-dusk">
           {LISTENING_THEME_LABEL[item.theme]}
         </span>
       </div>
@@ -136,7 +136,7 @@ export default function EscucharPage() {
       <div className="flex gap-1.5 flex-wrap mb-8">
         <button
           onClick={() => setLevelFilter("todos")}
-          className={`text-[11px] px-2.5 py-1 rounded-full border transition-colors ${
+          className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
             levelFilter === "todos" ? "bg-ink text-bg border-ink" : "border-border text-ink-soft hover:text-ink"
           }`}
         >
@@ -146,7 +146,7 @@ export default function EscucharPage() {
           <button
             key={lvl}
             onClick={() => setLevelFilter(lvl)}
-            className={`text-[11px] px-2.5 py-1 rounded-full border transition-colors ${
+            className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
               levelFilter === lvl ? "bg-ink text-bg border-ink" : "border-border text-ink-soft hover:text-ink"
             }`}
           >
@@ -158,7 +158,7 @@ export default function EscucharPage() {
       <div className="flex-1 flex flex-col gap-6 fade-up" key={item.id}>
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-[11px] px-2 py-0.5 rounded-full bg-sage-soft text-sage-ink">{item.level}</span>
+            <span className="text-xs px-2 py-0.5 rounded-full bg-sage-soft text-sage-ink">{item.level}</span>
             <h1 className="font-serif text-2xl text-ink leading-tight">{item.title}</h1>
           </div>
           <p className="text-ink-faint text-sm">
@@ -193,7 +193,7 @@ export default function EscucharPage() {
             </button>
           </div>
           {playState !== "idle" && (
-            <span className="text-[11px] text-ink-faint">
+            <span className="text-xs text-ink-faint">
               Línea {lineIndex + 1} / {item.lines.length}
             </span>
           )}

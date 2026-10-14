@@ -62,7 +62,7 @@ export default function NivelesPage() {
                   <span className="font-serif text-xl text-ink">{level}</span>
                   <span className="text-xs px-2 py-0.5 rounded-full bg-bg-soft text-ink-faint">{LEVEL_LABEL[level]}</span>
                 </div>
-                {!hasContent && <span className="text-[11px] text-ink-faint">próximamente</span>}
+                {!hasContent && <span className="text-xs text-ink-faint">próximamente</span>}
               </div>
               <p className="text-sm text-ink-soft leading-relaxed mb-3">{LEVEL_BLURB[level]}</p>
 
@@ -75,15 +75,15 @@ export default function NivelesPage() {
                         style={{ width: `${pct}%` }}
                       />
                     </div>
-                    <span className="text-[11px] text-ink-faint w-10 text-right tabular-nums">{pct}%</span>
+                    <span className="text-xs text-ink-faint w-10 text-right tabular-nums">{pct}%</span>
                   </div>
-                  <p className="text-[11px] text-ink-faint mt-2">
+                  <p className="text-xs text-ink-faint mt-2">
                     {p?.mastered ?? 0} palabras dominadas de {p?.total ?? 0}
                     {notes.length > 0 && ` · ${notesDone} de ${notes.length} reglas gramaticales`}
                   </p>
                 </>
               ) : (
-                <p className="text-[11px] text-ink-faint">Se irá llenando en próximas actualizaciones de la app.</p>
+                <p className="text-xs text-ink-faint">Se irá llenando en próximas actualizaciones de la app.</p>
               )}
             </div>
           );

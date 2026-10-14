@@ -125,7 +125,7 @@ export default function EscribirPage() {
           >
             Acentos estrictos
           </Chip>
-          <span className="text-[11px] text-ink-faint">
+          <span className="text-xs text-ink-faint">
             {strict ? "una palabra sin sus acentos cuenta como fallo" : "sin acentos se acepta (pero te lo marco)"}
           </span>
         </div>
@@ -152,7 +152,7 @@ export default function EscribirPage() {
                 <span className="flex-1 h-1.5 rounded-full bg-border overflow-hidden">
                   <span className="block h-full rounded-full bg-sage" style={{ width: `${pct}%` }} />
                 </span>
-                <span className="text-[11px] text-ink-faint tabular-nums">
+                <span className="text-xs text-ink-faint tabular-nums">
                   {mastered}/{pool.length}
                 </span>
               </span>
@@ -174,7 +174,7 @@ export default function EscribirPage() {
                     <span className="text-ink font-medium">{it.answers[0]}</span>
                     {(it.prompt || it.es) && <span className="text-ink-faint"> · {it.prompt ?? it.es}</span>}
                   </span>
-                  <span className="text-[11px] text-clay shrink-0 tabular-nums">
+                  <span className="text-xs text-clay shrink-0 tabular-nums">
                     {s.fail} fallo{s.fail === 1 ? "" : "s"}
                     {s.accent > 0 ? ` · ${s.accent} de acento` : ""}
                   </span>
@@ -497,11 +497,11 @@ function Feedback({ item, result, strict }: { item: WriteItem; result: Compariso
       {verdict !== "exact" && (
         <div className="flex flex-col gap-3 text-lg leading-relaxed">
           <div>
-            <p className="text-[11px] uppercase tracking-wide text-ink-faint mb-0.5">Tú escribiste</p>
+            <p className="text-xs uppercase tracking-wide text-ink-faint mb-0.5">Tú escribiste</p>
             <Words cells={cells} side="typed" />
           </div>
           <div>
-            <p className="text-[11px] uppercase tracking-wide text-ink-faint mb-0.5">Correcto</p>
+            <p className="text-xs uppercase tracking-wide text-ink-faint mb-0.5">Correcto</p>
             <Words cells={cells} side="target" />
           </div>
         </div>

@@ -60,7 +60,7 @@ export default function PronunciacionPage() {
     <div className="max-w-lg mx-auto w-full px-6 py-10 flex-1 flex flex-col">
       <div className="mb-10">
         <span className="text-xs uppercase tracking-wide text-ink-faint">Pronunciación</span>
-        <p className="text-[11px] text-ink-faint mt-1.5 max-w-sm">
+        <p className="text-xs text-ink-faint mt-1.5 max-w-sm">
           El micrófono usa reconocimiento de voz (voz→texto), no mide tus
           fonemas. Sirve para practicar en voz alta y detectar cuando algo
           suena tan distinto que ni la máquina te entiende — no como nota
@@ -104,14 +104,14 @@ export default function PronunciacionPage() {
             {status === "match" && (
               <div className="text-sm bg-sage-soft border border-sage/25 rounded-xl px-4 py-3 max-w-sm text-left">
                 <p className="text-sage-ink font-medium">El reconocedor entendió exactamente "{item.fr}" ✓</p>
-                <p className="text-[11px] text-ink-faint mt-1.5 leading-relaxed">
+                <p className="text-xs text-ink-faint mt-1.5 leading-relaxed">
                   Eso no garantiza que la pronunciación esté perfecta — el
                   reconocimiento de voz adivina la palabra más probable y es
                   tolerante con el acento. Es una señal de que se entendió,
                   no una nota de pronunciación.
                 </p>
                 {confidence !== null && (
-                  <p className="text-[11px] text-ink-faint mt-1">confianza del reconocedor: {Math.round(confidence * 100)}%</p>
+                  <p className="text-xs text-ink-faint mt-1">confianza del reconocedor: {Math.round(confidence * 100)}%</p>
                 )}
               </div>
             )}
@@ -120,7 +120,7 @@ export default function PronunciacionPage() {
                 <p className="text-clay font-medium mb-1">El reconocedor entendió algo distinto</p>
                 <p className="text-ink-faint">dijiste: <span className="text-ink">{heard || "(no se entendió nada)"}</span></p>
                 <p className="text-ink-faint mt-1">objetivo: <span className="text-ink">{item.fr}</span></p>
-                <p className="text-[11px] text-ink-faint mt-2">
+                <p className="text-xs text-ink-faint mt-2">
                   Esta es la señal más confiable del módulo: si ni la
                   máquina te entendió, vale la pena escuchar el audio 🔊 de
                   nuevo y repetir más despacio.

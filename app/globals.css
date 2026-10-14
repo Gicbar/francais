@@ -14,17 +14,22 @@
   --border: #dde2f0;
   --ink: #1c2447;
   --ink-soft: #4d567a;
-  --ink-faint: #7b84a6;
+  --ink-faint: #5f6889;
 
   --sage: #3447a8;
   --sage-soft: #e6eaf8;
   --sage-ink: #243382;
 
-  --dusk: #6d71a8;
+  --dusk: #585c96;
   --dusk-soft: #ecedf6;
 
-  --clay: #c2455a;
+  --clay: #ad3a4f;
   --clay-soft: #f8e6e9;
+
+  --gm: #0e6f86;
+  --gm-soft: #e0f0f4;
+  --gf: #9c2f86;
+  --gf-soft: #f6e4f1;
 
   --line: rgba(80, 105, 190, 0.13);
   --margin: rgba(194, 69, 90, 0.35);
@@ -44,7 +49,7 @@
     --border: #2b3160;
     --ink: #eceffa;
     --ink-soft: #aab1d6;
-    --ink-faint: #7d85b0;
+    --ink-faint: #8d95be;
 
     --sage: #8f9fee;
     --sage-soft: rgba(143, 159, 238, 0.15);
@@ -55,6 +60,11 @@
 
     --clay: #ef8fa0;
     --clay-soft: rgba(239, 143, 160, 0.14);
+
+    --gm: #5cc4dc;
+    --gm-soft: rgba(92, 196, 220, 0.14);
+    --gf: #e08fd0;
+    --gf-soft: rgba(224, 143, 208, 0.14);
 
     --line: rgba(143, 159, 238, 0.08);
     --margin: rgba(239, 143, 160, 0.25);
@@ -81,6 +91,10 @@
   --color-dusk-soft: var(--dusk-soft);
   --color-clay: var(--clay);
   --color-clay-soft: var(--clay-soft);
+  --color-gm: var(--gm);
+  --color-gm-soft: var(--gm-soft);
+  --color-gf: var(--gf);
+  --color-gf-soft: var(--gf-soft);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
   --shadow-soft: var(--shadow-soft);

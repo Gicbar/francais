@@ -196,12 +196,12 @@ function ProgressRow({
     <Link href={href} className="flex items-center gap-4 group -mx-2 px-2 py-1 rounded-lg hover:bg-bg-soft transition-colors">
       <div className="w-32 shrink-0">
         <p className="text-sm text-ink">{label}</p>
-        <p className="text-[11px] text-ink-faint">{detail}</p>
+        <p className="text-xs text-ink-faint">{detail}</p>
       </div>
       <div className="flex-1 h-1.5 rounded-full bg-border overflow-hidden">
         <div className={`h-full rounded-full ${color === "sage" ? "bg-sage" : "bg-dusk"}`} style={{ width: `${pct}%` }} />
       </div>
-      <span className="text-[11px] text-ink-faint w-8 text-right shrink-0 tabular-nums">{pct}%</span>
+      <span className="text-xs text-ink-faint w-8 text-right shrink-0 tabular-nums">{pct}%</span>
     </Link>
   );
 }

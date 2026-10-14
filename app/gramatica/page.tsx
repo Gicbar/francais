@@ -173,7 +173,7 @@ function DrillRow({
         <span>{after}</span>
       </div>
       {checked && !correct && (
-        <p className="text-[11px] text-clay">respuesta: {drill.answers[0]}</p>
+        <p className="text-xs text-clay">respuesta: {drill.answers[0]}</p>
       )}
     </div>
   );

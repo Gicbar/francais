@@ -52,7 +52,7 @@ export default function GoalRing() {
         </svg>
         <span className="absolute inset-0 flex flex-col items-center justify-center">
           <span className="font-serif text-sm text-ink">{progress}</span>
-          <span className="text-[9px] text-ink-faint">/ {goal}</span>
+          <span className="text-xs text-ink-faint">/ {goal}</span>
         </span>
       </button>
       {editing && (

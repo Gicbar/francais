@@ -113,7 +113,7 @@ export default function HistoriasPage() {
         <span className="text-xs uppercase tracking-wide text-ink-faint">
           Historias · {readCount} leídas hoy
         </span>
-        <span className="text-[11px] px-2.5 py-1 rounded-full bg-dusk-soft text-dusk">
+        <span className="text-xs px-2.5 py-1 rounded-full bg-dusk-soft text-dusk">
           {STORY_THEME_LABEL[story.theme]}
         </span>
       </div>
@@ -121,7 +121,7 @@ export default function HistoriasPage() {
       <div className="flex gap-1.5 flex-wrap mb-8">
         <button
           onClick={() => setLevelFilter("todos")}
-          className={`text-[11px] px-2.5 py-1 rounded-full border transition-colors ${
+          className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
             levelFilter === "todos" ? "bg-ink text-bg border-ink" : "border-border text-ink-soft hover:text-ink"
           }`}
         >
@@ -131,7 +131,7 @@ export default function HistoriasPage() {
           <button
             key={lvl}
             onClick={() => setLevelFilter(lvl)}
-            className={`text-[11px] px-2.5 py-1 rounded-full border transition-colors ${
+            className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
               levelFilter === lvl ? "bg-ink text-bg border-ink" : "border-border text-ink-soft hover:text-ink"
             }`}
           >
@@ -143,7 +143,7 @@ export default function HistoriasPage() {
       <div className="flex-1 flex flex-col gap-6 fade-up" key={story.id}>
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-[11px] px-2 py-0.5 rounded-full bg-sage-soft text-sage-ink">{story.level}</span>
+            <span className="text-xs px-2 py-0.5 rounded-full bg-sage-soft text-sage-ink">{story.level}</span>
             <h1 className="font-serif text-2xl text-ink leading-tight">{story.title}</h1>
           </div>
           <p className="text-ink-faint text-sm">{story.titleEs}</p>
@@ -187,7 +187,7 @@ export default function HistoriasPage() {
           ))}
         </div>
 
-        <p className="text-[11px] text-ink-faint text-center -mt-2">toca una palabra si no la entendiste</p>
+        <p className="text-xs text-ink-faint text-center -mt-2">toca una palabra si no la entendiste</p>
 
         {!addOpen ? (
           <button
@@ -212,7 +212,7 @@ export default function HistoriasPage() {
               className="rounded-lg border border-border bg-surface px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sage/40"
             />
             {meaning && !meaningLoading && (
-              <p className="text-[11px] text-ink-faint -mt-1">sugerido automáticamente — corrígelo si hace falta</p>
+              <p className="text-xs text-ink-faint -mt-1">sugerido automáticamente — corrígelo si hace falta</p>
             )}
             <div className="flex gap-2 mt-1">
               <button onClick={saveWord} className="flex-1 rounded-full bg-sage text-bg text-xs py-2 hover:opacity-90 shadow-soft">

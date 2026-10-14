@@ -31,6 +31,27 @@ const RATINGS: { key: Rating; label: string; hint: string; cls: string }[] = [
   { key: "easy", label: "Fácil", hint: "sin pensar", cls: "border-sage/60 bg-sage-soft text-sage-ink" },
 ];
 
+// Género en color, siempre acompañado de texto (el color solo no basta):
+// masculino = azul verdoso, femenino = magenta. Los estudios con aprendices de alemán
+// muestran una ventaja modesta de codificar el género con color.
+const GENDER_BADGE = {
+  m: "bg-gm-soft text-gm",
+  f: "bg-gf-soft text-gf",
+  pl: "bg-dusk-soft text-dusk",
+} as const;
+const GENDER_TEXT = { m: "text-gm", f: "text-gf", pl: "text-dusk" } as const;
+
+function GenderedWord({ fr, gender }: { fr: string; gender?: "m" | "f" | "pl" | null }) {
+  const match = gender ? fr.match(/^(l['’]|(?:le|la|un|une|les|des)\s)/i) : null;
+  if (!gender || !match) return <>{fr}</>;
+  return (
+    <>
+      <span className={GENDER_TEXT[gender]}>{match[0]}</span>
+      {fr.slice(match[0].length)}
+    </>
+  );
+}
+
 export default function ReviewPage() {
   const [queue, setQueue] = useState<SessionCard[] | null>(null);
   const [total, setTotal] = useState(0);
@@ -251,7 +272,7 @@ export default function ReviewPage() {
           </button>
         </div>
 
-        <p className="text-[11px] text-ink-faint mt-3">
+        <p className="text-xs text-ink-faint mt-3">
           La revisión usa LanguageTool (gratis, público) — capta bien
           ortografía, concordancia y errores de patrón, pero puede no
           detectar todo (matices de tiempo verbal, por ejemplo). Tómalo como
@@ -306,7 +327,7 @@ export default function ReviewPage() {
         {reverse && !revealed && <p className="text-sm text-ink-soft -mb-2">¿Cómo se dice en francés?</p>}
         <div className="flex items-center gap-3 max-w-full px-2">
           <h1 className="font-serif text-[1.75rem] sm:text-4xl text-ink leading-snug break-words">
-            {reverse && !revealed ? current.card.es : current.card.fr}
+            {reverse && !revealed ? current.card.es : <GenderedWord fr={current.card.fr} gender={current.card.gender} />}
           </h1>
           <button
             disabled={reverse && !revealed}
@@ -319,7 +340,7 @@ export default function ReviewPage() {
         </div>
 
         {current.card.gender && (!reverse || revealed) && (
-          <span className="text-xs px-2.5 py-1 rounded-full bg-dusk-soft text-dusk">
+          <span className={`text-xs px-2.5 py-1 rounded-full ${GENDER_BADGE[current.card.gender]}`}>
             {current.card.gender === "m" ? "masculino" : current.card.gender === "f" ? "femenino" : "plural"}
           </span>
         )}
@@ -349,11 +370,11 @@ export default function ReviewPage() {
                   className={`flex flex-col items-center justify-center gap-0.5 rounded-xl border min-h-[54px] py-2.5 text-sm font-medium transition-transform active:scale-95 hover:-translate-y-0.5 ${r.cls}`}
                 >
                   <span>{r.label}</span>
-                  <span className="text-[10px] opacity-70 hidden sm:inline">{r.hint} · {idx + 1}</span>
+                  <span className="text-xs opacity-70 hidden sm:inline">{r.hint} · {idx + 1}</span>
                 </button>
               ))}
             </div>
-            <p className="hidden sm:block text-[11px] text-ink-faint mt-1">
+            <p className="hidden sm:block text-xs text-ink-faint mt-1">
               espacio para revelar · 1–4 para calificar
             </p>
           </div>
