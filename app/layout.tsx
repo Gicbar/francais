@@ -1,16 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Newsreader, Inter } from "next/font/google";
+import { Fraunces, Figtree } from "next/font/google";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
-const newsreader = Newsreader({
+const newsreader = Fraunces({
   variable: "--font-serif",
   subsets: ["latin"],
   style: ["normal", "italic"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const inter = Inter({
+const inter = Figtree({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -25,8 +25,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7f6f1" },
-    { media: "(prefers-color-scheme: dark)", color: "#14171a" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f6fb" },
+    { media: "(prefers-color-scheme: dark)", color: "#12152a" },
   ],
 };
 

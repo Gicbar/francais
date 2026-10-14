@@ -8,55 +8,61 @@
   de estrés que castiga innecesariamente equivocarse en una tarjeta.
 */
 :root {
-  --bg: #f7f6f1;
-  --bg-soft: #fbfaf7;
+  --bg: #f4f6fb;
+  --bg-soft: #fafbfe;
   --surface: #ffffff;
-  --border: #e6e2d6;
-  --ink: #23282a;
-  --ink-soft: #5b6462;
-  --ink-faint: #8b9290;
+  --border: #dde2f0;
+  --ink: #1c2447;
+  --ink-soft: #4d567a;
+  --ink-faint: #7b84a6;
 
-  --sage: #5f8570;
-  --sage-soft: #e6ede7;
-  --sage-ink: #2f4a3a;
+  --sage: #3447a8;
+  --sage-soft: #e6eaf8;
+  --sage-ink: #243382;
 
-  --dusk: #6f86a0;
-  --dusk-soft: #e9edf2;
+  --dusk: #6d71a8;
+  --dusk-soft: #ecedf6;
 
-  --clay: #bd7f5c;
-  --clay-soft: #f3e6dc;
+  --clay: #c2455a;
+  --clay-soft: #f8e6e9;
+
+  --line: rgba(80, 105, 190, 0.13);
+  --margin: rgba(194, 69, 90, 0.35);
 
   --radius: 16px;
   --shadow-soft: 0 1px 2px rgba(35, 40, 42, 0.04), 0 8px 24px rgba(35, 40, 42, 0.05);
   --shadow-lift: 0 4px 10px rgba(35, 40, 42, 0.06), 0 16px 32px rgba(35, 40, 42, 0.08);
-  --wash-a: rgba(95, 133, 112, 0.10);
-  --wash-b: rgba(111, 134, 160, 0.09);
+  --wash-a: rgba(52, 71, 168, 0.06);
+  --wash-b: rgba(194, 69, 90, 0.04);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14171a;
-    --bg-soft: #181c1f;
-    --surface: #1c2124;
-    --border: #2a3033;
-    --ink: #eceeec;
-    --ink-soft: #aab2b0;
-    --ink-faint: #7c8482;
+    --bg: #12152a;
+    --bg-soft: #161a33;
+    --surface: #1b2040;
+    --border: #2b3160;
+    --ink: #eceffa;
+    --ink-soft: #aab1d6;
+    --ink-faint: #7d85b0;
 
-    --sage: #8fb39d;
-    --sage-soft: rgba(143, 179, 157, 0.14);
-    --sage-ink: #cfe4d8;
+    --sage: #8f9fee;
+    --sage-soft: rgba(143, 159, 238, 0.15);
+    --sage-ink: #d3dafc;
 
-    --dusk: #9bb0c4;
-    --dusk-soft: rgba(155, 176, 196, 0.14);
+    --dusk: #a3a6d8;
+    --dusk-soft: rgba(163, 166, 216, 0.14);
 
-    --clay: #d6a084;
-    --clay-soft: rgba(214, 160, 132, 0.14);
+    --clay: #ef8fa0;
+    --clay-soft: rgba(239, 143, 160, 0.14);
+
+    --line: rgba(143, 159, 238, 0.08);
+    --margin: rgba(239, 143, 160, 0.25);
 
     --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.25);
     --shadow-lift: 0 4px 10px rgba(0, 0, 0, 0.25), 0 20px 40px rgba(0, 0, 0, 0.3);
-    --wash-a: rgba(143, 179, 157, 0.08);
-    --wash-b: rgba(155, 176, 196, 0.07);
+    --wash-a: rgba(143, 159, 238, 0.06);
+    --wash-b: rgba(239, 143, 160, 0.03);
   }
 }
 
@@ -86,14 +92,18 @@
 }
 
 body {
+  /* Papel de cuaderno Seyès: renglones finos y margen roja a la izquierda */
   background:
-    radial-gradient(ellipse 900px 500px at 12% -10%, var(--wash-a), transparent 60%),
-    radial-gradient(ellipse 700px 500px at 100% 0%, var(--wash-b), transparent 55%),
+    linear-gradient(90deg, transparent calc(50% - 21.5rem), var(--margin) calc(50% - 21.5rem), var(--margin) calc(50% - 21.5rem + 1px), transparent calc(50% - 21.5rem + 1px)),
+    repeating-linear-gradient(180deg, transparent 0 31px, var(--line) 31px 32px),
     var(--bg);
   background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 720px) {
+  body { background: repeating-linear-gradient(180deg, transparent 0 31px, var(--line) 31px 32px), var(--bg); background-attachment: fixed; }
 }
 
 h1, h2, h3, .font-serif {

@@ -446,5 +446,117 @@
     "theme": "essentiel",
     "level": "A1",
     "source": "Cours 14"
+  },
+  {
+    "id": "st57",
+    "fr": "Pour aller au bureau, je mets un pantalon et une chemise.",
+    "es": "Para ir a la oficina, me pongo un pantalón y una camisa.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 21"
+  },
+  {
+    "id": "st58",
+    "fr": "Aujourd'hui, elle porte une robe noire et mes collègues portent un costume.",
+    "es": "Hoy ella lleva un vestido negro y mis colegas llevan traje.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 21"
+  },
+  {
+    "id": "st59",
+    "fr": "Nous avons regardé les photos du défilé et j'ai rencontré un styliste.",
+    "es": "Miramos las fotos del desfile y conocí a un diseñador.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 21"
+  },
+  {
+    "id": "st60",
+    "fr": "Vous avez choisi votre tenue pour l'entretien ?",
+    "es": "¿Eligió su atuendo para la entrevista?",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 21"
+  },
+  {
+    "id": "st61",
+    "fr": "Je joue de la guitare et mon frère joue du piano.",
+    "es": "Toco la guitarra y mi hermano toca el piano.",
+    "theme": "loisirs",
+    "level": "A1",
+    "source": "Cours 22"
+  },
+  {
+    "id": "st62",
+    "fr": "Le DJ met de la musique pendant l'afterwork.",
+    "es": "El DJ pone música durante el afterwork.",
+    "theme": "loisirs",
+    "level": "A1",
+    "source": "Cours 22"
+  },
+  {
+    "id": "st63",
+    "fr": "Il y a quinze mille utilisateurs sur l'application de Pablo.",
+    "es": "Hay quince mil usuarios en la aplicación de Pablo.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 22"
+  },
+  {
+    "id": "st64",
+    "fr": "Aujourd'hui, c'est très calme, mais hier, c'était bruyant.",
+    "es": "Hoy está muy tranquilo, pero ayer estaba ruidoso.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 22"
+  },
+  {
+    "id": "st65",
+    "fr": "Samedi, j'ai assisté à un hackathon à Cali. C'était génial !",
+    "es": "El sábado asistí a un hackatón en Cali. ¡Fue genial!",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 22"
+  },
+  {
+    "id": "st66",
+    "fr": "Il y avait beaucoup de monde et il faisait chaud.",
+    "es": "Había mucha gente y hacía calor.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 22"
+  },
+  {
+    "id": "st67",
+    "fr": "Hier soir, nous avons dansé à une fête chez Ana. Il faisait frais dehors.",
+    "es": "Anoche bailamos en una fiesta en casa de Ana. Afuera hacía fresco.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 22"
+  },
+  {
+    "id": "st68",
+    "fr": "Hier, Camila est allée au cinéma et ses collègues sont rentrés à vingt heures.",
+    "es": "Ayer, Camila fue al cine y sus colegas regresaron a las ocho de la noche.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 23"
+  },
+  {
+    "id": "st69",
+    "fr": "Nous n'avons pas pris le bus.",
+    "es": "No tomamos el bus.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 23"
+  },
+  {
+    "id": "st70",
+    "fr": "D'abord, j'ai cherché un vol. Ensuite, j'ai acheté mon billet. Puis j'ai pris l'avion. Enfin, je suis arrivé à Paris.",
+    "es": "Primero busqué un vuelo. Luego compré mi boleto. Después tomé el avión. Por último, llegué a París.",
+    "theme": "essentiel",
+    "level": "A1",
+    "source": "Cours 23"
   }
 ]

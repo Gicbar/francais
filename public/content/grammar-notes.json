@@ -354,6 +354,179 @@
     "level": "A1"
   },
   {
+    "id": "g-mettre-porter",
+    "title": "mettre vs porter",
+    "wrong": "Aujourd'hui, je mets une robe noire. (para describir lo que llevas puesto)",
+    "right": "Aujourd'hui, je porte une robe noire.",
+    "why": "'mettre' es la acción de ponerse algo (le matin, je mets une veste). 'porter' describe lo que ya llevas puesto (aujourd'hui, je porte une veste). Mettre se conjuga: je mets, tu mets, il met, nous mettons, vous mettez, ils mettent.",
+    "cardIds": [
+      "c21-17",
+      "c21-19",
+      "c21-20"
+    ],
+    "drills": [
+      {
+        "prompt": "Pour aller au bureau, je ___ un pantalon. (mettre, yo)",
+        "answers": [
+          "mets"
+        ]
+      },
+      {
+        "prompt": "Qu'est-ce que vous ___ pour la réunion ? (mettre, ustedes)",
+        "answers": [
+          "mettez"
+        ]
+      },
+      {
+        "prompt": "Mes collègues ___ souvent un costume. (llevan puesto)",
+        "answers": [
+          "portent"
+        ]
+      }
+    ],
+    "level": "A1"
+  },
+  {
+    "id": "g-jouer-de",
+    "title": "jouer de + instrumento",
+    "wrong": "Il joue la flûte.",
+    "right": "Il joue de la flûte.",
+    "why": "Para tocar un instrumento se dice jouer DE + instrumento, y 'de' se contrae con el artículo: de + le = du, de + la = de la, de + l' = de l'. Es la misma contracción de faire du sport.",
+    "cardIds": [
+      "c22-1"
+    ],
+    "drills": [
+      {
+        "prompt": "Il joue ___ violon.",
+        "answers": [
+          "du"
+        ]
+      },
+      {
+        "prompt": "Nous jouons ___ trompette.",
+        "answers": [
+          "de la"
+        ]
+      },
+      {
+        "prompt": "Vous jouez ___ accordéon ?",
+        "answers": [
+          "de l'",
+          "de l’"
+        ]
+      }
+    ],
+    "level": "A1"
+  },
+  {
+    "id": "g-nombres-cent",
+    "title": "Números grandes: cent, mille, million",
+    "wrong": "Deux cent personnes. / Deux milles personnes.",
+    "right": "Deux cents personnes. / Deux mille personnes.",
+    "why": "'cent' lleva -s cuando es múltiplo y nada lo sigue (deux cents), pero no si le sigue otro número (deux cent un, deux cent cinquante). 'mille' nunca cambia (deux mille). 'million' es un sustantivo y se une con de: un million d'utilisateurs, deux millions d'utilisateurs.",
+    "cardIds": [
+      "c22-17",
+      "c22-18",
+      "c22-20"
+    ],
+    "drills": [
+      {
+        "prompt": "200 → deux ___",
+        "answers": [
+          "cents"
+        ]
+      },
+      {
+        "prompt": "2 000 → deux ___",
+        "answers": [
+          "mille"
+        ]
+      },
+      {
+        "prompt": "250 → deux cent ___",
+        "answers": [
+          "cinquante"
+        ]
+      }
+    ],
+    "level": "A1"
+  },
+  {
+    "id": "g-cest-cetait",
+    "title": "c'est vs c'était, y las descripciones del pasado",
+    "wrong": "Hier, c'est génial.",
+    "right": "Hier, c'était génial.",
+    "why": "Para describir cómo es algo ahora usa c'est; para cómo era algo en el pasado usa c'était. Lo mismo con il y a → il y avait, y il fait → il faisait. Después de c'est / c'était el adjetivo queda en masculino (c'était nul, c'est animé). Se usan para la descripción (lugar, clima, ambiente); las acciones van en passé composé.",
+    "cardIds": [
+      "c22-28",
+      "c22-29",
+      "c22-30",
+      "c22-31"
+    ],
+    "drills": [
+      {
+        "prompt": "Hier soir, ___ génial ! (c'est / c'était)",
+        "answers": [
+          "c'était"
+        ]
+      },
+      {
+        "prompt": "Maintenant, ___ très calme. (c'est / c'était)",
+        "answers": [
+          "c'est"
+        ]
+      },
+      {
+        "prompt": "Hier, ___ beaucoup de monde. (il y a / il y avait)",
+        "answers": [
+          "il y avait"
+        ]
+      },
+      {
+        "prompt": "Samedi, ___ chaud. (il fait / il faisait)",
+        "answers": [
+          "il faisait"
+        ]
+      }
+    ],
+    "level": "A1"
+  },
+  {
+    "id": "g-negation-pc",
+    "title": "Negación en passé composé y orden del relato",
+    "wrong": "Nous pas avons pris le bus.",
+    "right": "Nous n'avons pas pris le bus.",
+    "why": "En passé composé la negación rodea al auxiliar (avoir o être): ne + auxiliar + pas + participio. Para ordenar un relato usa d'abord → ensuite → puis → enfin.",
+    "cardIds": [
+      "c23-11",
+      "c23-12",
+      "c23-13",
+      "c23-14",
+      "c23-15"
+    ],
+    "drills": [
+      {
+        "prompt": "Il ___ a pas téléphoné à Sam. (ne / n')",
+        "answers": [
+          "n'"
+        ]
+      },
+      {
+        "prompt": "Vous n'avez ___ dormi. (pas)",
+        "answers": [
+          "pas"
+        ]
+      },
+      {
+        "prompt": "___, j'ai cherché un vol. Enfin, j'ai pris l'avion. (primero)",
+        "answers": [
+          "d'abord"
+        ]
+      }
+    ],
+    "level": "A1"
+  },
+  {
     "id": "g-passe-compose-avoir",
     "title": "Passé composé con avoir",
     "wrong": "Hier, je regarde un film.",
