@@ -14,7 +14,7 @@ import {
   dialogueStop,
   type DialoguePlayerState,
 } from "@/lib/speech";
-import { markListeningDone } from "@/lib/storage";
+import { bumpLog, markListeningDone } from "@/lib/storage";
 import { LEVELS, type Level } from "@/lib/types";
 
 function shuffle<T>(arr: T[]): T[] {
@@ -103,7 +103,10 @@ export default function EscucharPage() {
     : 0;
 
   function next() {
-    if (item) markListeningDone(item.id);
+    if (item) {
+      markListeningDone(item.id);
+      bumpLog({ listened: 1 });
+    }
     setDoneCount((c) => c + 1);
     resetForNew();
     setI((v) => v + 1);

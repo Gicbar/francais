@@ -63,4 +63,6 @@ export type DailyLog = {
   reviews: number;
   newWords: number;
   sentencesRead: number;
+  written?: number; // ejercicios de escritura (producción)
+  listened?: number; // diálogos escuchados (comprensión oral)
 };

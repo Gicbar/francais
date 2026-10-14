@@ -98,6 +98,8 @@ export function bumpLog(patch: Partial<Omit<DailyLog, "date">>) {
     reviews: current.reviews + (patch.reviews ?? 0),
     newWords: current.newWords + (patch.newWords ?? 0),
     sentencesRead: current.sentencesRead + (patch.sentencesRead ?? 0),
+    written: (current.written ?? 0) + (patch.written ?? 0),
+    listened: (current.listened ?? 0) + (patch.listened ?? 0),
   };
   write(KEYS.logs, logs);
   updateStreak(date);
@@ -124,6 +126,10 @@ export function getDailyGoal(): number {
 
 export function setDailyGoal(n: number) {
   write(KEYS.goal, Math.max(5, Math.round(n)));
+}
+
+export function getTodayLog(): DailyLog | null {
+  return getLogs()[todayISO()] ?? null;
 }
 
 export function getTodayProgress(): number {

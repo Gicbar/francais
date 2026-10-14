@@ -64,10 +64,20 @@ export default function ReviewPage() {
   }
 
   const current = queue && queue.length > 0 ? queue[0] : null;
+  // Producción: cuando ya reconoces la palabra (2+ repasos, intervalo >= 3 días)
+  // te damos el significado y tienes que recordar la forma en francés.
+  // Recordar la forma desde el significado entrena más que reconocerla.
+  const reverse = !!current && !current.isNew && current.state.reps >= 2 && current.state.interval >= 3;
 
   useEffect(() => {
-    if (current && !elaborationCard) speakFrench(current.card.fr);
+    if (current && !elaborationCard && !reverse) speakFrench(current.card.fr);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current?.card.id, elaborationCard]);
+
+  useEffect(() => {
+    if (reverse && revealed && current) speakFrench(current.card.fr);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reverse, revealed]);
 
   // Atajos de teclado (patrón Anki): espacio revela, 1-4 califica.
   useEffect(() => {
@@ -293,18 +303,22 @@ export default function ReviewPage() {
           {current.isNew && <span className="text-dusk">· nueva</span>}
         </span>
 
+        {reverse && !revealed && <p className="text-sm text-ink-soft -mb-2">¿Cómo se dice en francés?</p>}
         <div className="flex items-center gap-3 max-w-full px-2">
-          <h1 className="font-serif text-[1.75rem] sm:text-4xl text-ink leading-snug break-words">{current.card.fr}</h1>
+          <h1 className="font-serif text-[1.75rem] sm:text-4xl text-ink leading-snug break-words">
+            {reverse && !revealed ? current.card.es : current.card.fr}
+          </h1>
           <button
+            disabled={reverse && !revealed}
             onClick={() => speakFrench(current.card.fr, { userInitiated: true })}
             aria-label="Escuchar"
-            className="shrink-0 w-9 h-9 rounded-full border border-border flex items-center justify-center text-ink-soft hover:bg-surface hover:text-ink transition-colors"
+            className="shrink-0 w-9 h-9 rounded-full border border-border flex items-center justify-center text-ink-soft hover:bg-surface hover:text-ink transition-colors disabled:opacity-30"
           >
             🔊
           </button>
         </div>
 
-        {current.card.gender && (
+        {current.card.gender && (!reverse || revealed) && (
           <span className="text-xs px-2.5 py-1 rounded-full bg-dusk-soft text-dusk">
             {current.card.gender === "m" ? "masculino" : current.card.gender === "f" ? "femenino" : "plural"}
           </span>

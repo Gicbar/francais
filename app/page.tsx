@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { dueCount, totalMastered, totalStarted, categoryProgress, strugglingCards, levelProgress } from "@/lib/deck";
-import { getStreak, getAudioPlays, lifetimeSentencesRead, getGrammarProgress } from "@/lib/storage";
+import { getStreak, getAudioPlays, lifetimeSentencesRead, getGrammarProgress, getTodayLog } from "@/lib/storage";
 import { getEffectiveSentences, getEffectiveGrammarNotes } from "@/lib/content";
 import { LEVELS } from "@/lib/types";
 import GoalRing from "@/components/GoalRing";
@@ -27,6 +27,7 @@ export default function Home() {
     | null
   >(null);
   const [currentLevel, setCurrentLevel] = useState<string | null>(null);
+  const [today, setToday] = useState<{ reviews: number; input: number; written: number } | null>(null);
 
   useEffect(() => {
     setStats({
@@ -44,6 +45,13 @@ export default function Home() {
       sentencesTotal: getEffectiveSentences().length,
       grammarDone,
       grammarTotal: getEffectiveGrammarNotes().length,
+    });
+
+    const t = getTodayLog();
+    setToday({
+      reviews: t?.reviews ?? 0,
+      input: (t?.sentencesRead ?? 0) + (t?.listened ?? 0),
+      written: t?.written ?? 0,
     });
 
     const lp = levelProgress();
@@ -105,18 +113,36 @@ export default function Home() {
         </Link>
       )}
 
-      <div className="flex flex-wrap gap-2 text-sm">
-        <span className="text-ink-faint w-full">Si te queda tiempo</span>
-        {[
-          { href: "/leer", label: "Leer frases" },
-          { href: "/escuchar", label: "Escuchar un diálogo" },
-          { href: "/escribir", label: "Escribir" },
-        ].map((l) => (
-          <Link key={l.href} href={l.href} className="px-4 py-2 rounded-full border border-border bg-surface text-ink-soft hover:text-ink hover:border-sage/50 transition-colors">
-            {l.label}
-          </Link>
-        ))}
-      </div>
+      <section aria-labelledby="ruta">
+        <h2 id="ruta" className="font-serif text-lg text-ink mb-1">Ruta de hoy</h2>
+        <p className="text-sm text-ink-soft mb-3">
+          Recordar, escuchar, escribir: las tres cosas que más rinden, en ese orden.
+        </p>
+        <ol className="card divide-y divide-border">
+          {[
+            { href: "/review", label: "Repasar tarjetas", hint: "recordar sin mirar", done: (today?.reviews ?? 0) > 0 },
+            { href: "/escuchar", label: "Escuchar o leer algo", hint: "entender sin traducir", done: (today?.input ?? 0) > 0 },
+            { href: "/escribir", label: "Escribir", hint: "producir tú mismo", done: (today?.written ?? 0) > 0 },
+          ].map((step, i) => (
+            <li key={step.href}>
+              <Link href={step.href} className="flex items-center gap-4 px-5 py-3.5 hover:bg-bg-soft transition-colors">
+                <span
+                  className={`w-7 h-7 rounded-full border flex items-center justify-center text-xs shrink-0 ${
+                    step.done ? "bg-sage border-sage text-bg" : "border-border text-ink-faint"
+                  }`}
+                  aria-label={step.done ? "hecho" : `paso ${i + 1}`}
+                >
+                  {step.done ? "✓" : i + 1}
+                </span>
+                <span className="flex-1 min-w-0">
+                  <span className={`block text-sm ${step.done ? "text-ink-soft line-through decoration-ink-faint/50" : "text-ink"}`}>{step.label}</span>
+                  <span className="block text-xs text-ink-faint">{step.hint}</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </section>
 
       <div className="card p-5 sm:p-6">
         <h2 className="font-serif text-lg text-ink mb-4">Tu progreso</h2>

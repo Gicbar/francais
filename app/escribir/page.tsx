@@ -265,7 +265,7 @@ function Session({
     const cmp = compare(input, item.answers);
     const ok = cmp.verdict === "exact" || (cmp.verdict === "accent" && !strict);
     recordSpelling(item.id, ok, cmp.verdict === "accent");
-    bumpLog({});
+    bumpLog({ written: 1 });
     setResult(cmp);
     setLog((l) => [...l, { item, input, verdict: cmp.verdict, correct: ok }]);
     if (!isDictation && item.speak) speakFrench(item.speak);
